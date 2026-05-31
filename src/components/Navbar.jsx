@@ -15,6 +15,7 @@ const primaryNavItems = [
   { name: 'CheatSheet', path: '/cheatsheet' },
   { name: 'Resources', path: '/resources' },
   { name: 'Interview Prep', path: '/interview-prep' },
+  { name: 'Roadmaps', path: '/roadmaps' },
   { name: 'Tools', path: '/tools' },
 ]
 
