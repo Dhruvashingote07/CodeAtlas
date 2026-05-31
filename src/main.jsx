@@ -6,6 +6,7 @@ import { ThemeProvider } from './context/ThemeContext'
 import { BookmarkProvider } from './context/BookmarkContext'
 import { SearchProvider } from './context/SearchContext'
 import Analytics from './components/Analytics'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 import App from './App'
 import './index.css'
 
@@ -14,6 +15,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <HelmetProvider>
     <BrowserRouter>
       <Analytics />
+      <SpeedInsights />
       <ThemeProvider>
         <BookmarkProvider>
           <SearchProvider>
