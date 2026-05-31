@@ -304,8 +304,8 @@ export default function Navbar() {
                   onClick={() => { setIsOpen(false); closeMenus(); }}
                   className="block px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"
                 >
-                  <span className="mr-2">{item.icon}</span>
-                  {item.name}
+                    <span className="mr-2"></span>
+                    {item.name}
                 </Link>
               ))}
 
