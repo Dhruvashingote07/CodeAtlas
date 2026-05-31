@@ -1,0 +1,370 @@
+{
+  "id": "ai",
+  "slug": "ai",
+  "name": "Artificial Intelligence",
+  "icon": "🤖",
+  "color": "#8B5CF6",
+  "category": "AI & Machine Learning",
+  "description": "The simulation of human intelligence by machines, encompassing learning, reasoning, problem-solving, perception, and language understanding. The broadest field in computer science aiming to create intelligent systems.",
+  "difficulty": "Advanced",
+  "paradigms": ["Symbolic AI", "Machine Learning", "Deep Learning", "Reinforcement Learning", "Evolutionary Algorithms"],
+  "tags": ["ai", "artificial-intelligence", "intelligence", "agents", "search", "knowledge-representation", "planning", "nlp", "computer-vision", "robotics"],
+  "overview": "Artificial Intelligence is the broad discipline of creating intelligent machines that can perceive, reason, learn, and act. Founded at the Dartmouth Conference in 1956, AI has undergone several waves: symbolic AI (expert systems, logic), statistical learning (ML), and the current deep learning revolution powered by large neural networks and massive data. AI encompasses subfields including machine learning, natural language processing, computer vision, robotics, knowledge representation, automated reasoning, and planning. Modern AI achievements include GPT-4, DALL-E, AlphaFold, self-driving cars, and game-playing systems (AlphaGo, AlphaZero). AI raises profound technical challenges (generalization, interpretability, alignment) and societal questions (ethics, fairness, job displacement). The field is advancing rapidly with transformer architectures, foundation models, and multimodal AI systems.",
+
+  "learningPath": [
+    {
+      "stage": 1,
+      "title": "AI Foundations & Mathematics",
+      "duration": "4-6 weeks",
+      "description": "Build the mathematical and conceptual foundations needed for AI: linear algebra, calculus, probability, statistics, and AI history.",
+      "topics": [
+        "History of AI: Dartmouth Conference, AI winters and springs",
+        "What is intelligence? Turing Test, Chinese Room, definitions",
+        "Types of AI: Narrow (weak) vs General (strong) vs Superintelligence",
+        "AI subfields overview: ML, NLP, CV, robotics, expert systems",
+        "Linear algebra for AI: vectors, matrices, eigenvalues, SVD",
+        "Calculus: partial derivatives, gradients, chain rule, Jacobians",
+        "Probability: axioms, Bayes' theorem, distributions, expectations",
+        "Statistics: descriptive, inferential, hypothesis testing, correlation",
+        "Information theory: entropy, cross-entropy, KL divergence, mutual information",
+        "Optimization: gradient descent, convex optimization, Lagrange multipliers",
+        "Complexity theory basics for AI algorithms",
+        "Graph theory: search spaces, trees, graphs, heuristics"
+      ],
+      "projects": ["Matrix operations library for ML", "Probability simulation (Monte Carlo)", "Gradient descent visualization tool", "Bayesian inference calculator"]
+    },
+    {
+      "stage": 2,
+      "title": "Problem Solving & Search Algorithms",
+      "duration": "3-4 weeks",
+      "description": "Learn classical AI problem-solving techniques: search algorithms, constraint satisfaction, and game playing.",
+      "topics": [
+        "Problem formulation: state space, initial state, goal test, actions",
+        "Uninformed search: BFS, DFS, depth-limited, iterative deepening, uniform cost",
+        "Informed search: Greedy best-first, A* algorithm, admissible heuristics",
+        "Heuristic functions: design, properties (admissibility, consistency)",
+        "Local search: hill climbing, simulated annealing, genetic algorithms",
+        "Constraint Satisfaction Problems (CSP): backtracking, forward checking, arc consistency",
+        "Game playing: minimax algorithm, alpha-beta pruning",
+        "Adversarial search: expectiminimax for stochastic games",
+        "Knowledge representation: propositional logic, first-order logic",
+        "Resolution and unification in logic",
+        "Reasoning under uncertainty: Bayesian networks, Markov models",
+        "Planning: STRIPS, PDDL, hierarchical task networks"
+      ],
+      "projects": ["A* pathfinding visualization", "Sudoku solver with CSP", "Chess/tictactoe AI with minimax", "Scheduling optimizer with constraint satisfaction"]
+    },
+    {
+      "stage": 3,
+      "title": "Probability, Uncertainty & Bayesian Methods",
+      "duration": "3-4 weeks",
+      "description": "Master probabilistic reasoning, Bayesian inference, and handling uncertainty in AI systems.",
+      "topics": [
+        "Bayesian inference: prior, likelihood, posterior, evidence",
+        "Probabilistic graphical models: Bayesian networks, Markov random fields",
+        "Inference in Bayesian networks: exact (variable elimination), approximate (sampling)",
+        "Hidden Markov Models (HMM): forward-backward, Viterbi, Baum-Welch",
+        "Markov decision processes (MDP): states, actions, rewards, transition model",
+        "Kalman filters for state estimation",
+        "Particle filters for robot localization",
+        "Naive Bayes classifier — probabilistic ML foundational model",
+        "Monte Carlo methods: rejection sampling, importance sampling, MCMC",
+        "Gaussian Mixture Models (GMM) and Expectation-Maximization (EM)",
+        "Causality and counterfactual reasoning (Pearl)"
+      ],
+      "projects": ["Spam classifier with Naive Bayes", "Robot localization with particle filter", "Weather prediction with HMM", "Causal inference analysis"]
+    },
+    {
+      "stage": 4,
+      "title": "Machine Learning Fundamentals",
+      "duration": "5-6 weeks",
+      "description": "Core machine learning algorithms: supervised, unsupervised, and ensemble methods with practical implementation.",
+      "topics": [
+        "Supervised learning: regression (linear, polynomial, ridge, lasso)",
+        "Supervised learning: classification (logistic regression, decision trees, SVM)",
+        "k-Nearest Neighbors (k-NN): distance metrics, curse of dimensionality",
+        "Decision trees: ID3, C4.5, CART, pruning, feature importance",
+        "Ensemble methods: bagging, random forests, boosting (AdaBoost, Gradient Boosting, XGBoost)",
+        "Support Vector Machines: kernels (linear, RBF, polynomial), soft margin",
+        "Unsupervised learning: k-means clustering, DBSCAN, hierarchical clustering",
+        "Dimensionality reduction: PCA, t-SNE, UMAP",
+        "Model evaluation: cross-validation, bias-variance tradeoff",
+        "Metrics: accuracy, precision, recall, F1, ROC-AUC, confusion matrix",
+        "Feature engineering and feature selection",
+        "Regularization: L1 (Lasso), L2 (Ridge), ElasticNet",
+        "Hyperparameter tuning: grid search, random search, Bayesian optimization",
+        "Imbalanced datasets: SMOTE, class weights, sampling strategies"
+      ],
+      "projects": ["House price prediction with regression", "Customer churn classifier", "Image classification with SVM", "Anomaly detection system"]
+    },
+    {
+      "stage": 5,
+      "title": "Deep Learning & Neural Networks",
+      "duration": "6-8 weeks",
+      "description": "Deep dive into neural networks: architectures, training, regularization, and modern deep learning techniques.",
+      "topics": [
+        "Perceptron and multilayer perceptrons (MLP)",
+        "Activation functions: sigmoid, tanh, ReLU, LeakyReLU, GELU, Swish",
+        "Backpropagation: chain rule, gradient computation, computational graphs",
+        "Optimization: SGD, Momentum, NAG, AdaGrad, RMSprop, Adam, AdamW",
+        "Weight initialization: Xavier/Glorot, He initialization",
+        "Regularization: Dropout, BatchNorm, LayerNorm, weight decay, data augmentation",
+        "Convolutional Neural Networks (CNN): convolution, pooling, padding, stride",
+        "CNN architectures: LeNet, AlexNet, VGG, ResNet, Inception, EfficientNet",
+        "Recurrent Neural Networks (RNN): vanilla, LSTM, GRU, bidirectional",
+        "Attention mechanism: Bahdanau, Luong, self-attention",
+        "Transformers: multi-head attention, positional encoding, feed-forward",
+        "Transformer architectures: BERT, GPT, T5, ViT",
+        "Transfer learning and fine-tuning",
+        "Autoencoders: vanilla, denoising, variational (VAE)",
+        "Generative models: GANs (DCGAN, StyleGAN, Pix2Pix)",
+        "Diffusion models: DDPM, latent diffusion, Stable Diffusion",
+        "Graph Neural Networks (GNN): GCN, GAT, GraphSAGE",
+        "Neural Architecture Search (NAS)"
+      ],
+      "projects": ["CNN for image classification (CIFAR-10)", "Text generation with LSTM/Transformer", "Neural style transfer", "VAE for image generation"]
+    },
+    {
+      "stage": 6,
+      "title": "Natural Language Processing (NLP)",
+      "duration": "4-6 weeks",
+      "description": "Master NLP techniques from tokenization to modern large language models and transformers.",
+      "topics": [
+        "Text preprocessing: tokenization, stemming, lemmatization, stop words",
+        "Text representation: Bag-of-Words, TF-IDF, N-grams",
+        "Word embeddings: Word2Vec (CBOW, Skip-gram), GloVe, FastText",
+        "Sequence models: BiLSTM, GRU, encoder-decoder architecture",
+        "Attention and transformers for NLP",
+        "BERT: masked language modeling, next sentence prediction, fine-tuning",
+        "GPT: autoregressive language modeling, prompt engineering, in-context learning",
+        "Sequence-to-sequence models: T5, BART, mT5",
+        "Named Entity Recognition (NER)",
+        "Part-of-Speech (POS) tagging and syntactic parsing",
+        "Sentiment analysis and emotion detection",
+        "Machine translation: encoder-decoder with attention",
+        "Text summarization: extractive vs abstractive",
+        "Question answering: extractive, generative, retrieval-augmented (RAG)",
+        "Topic modeling: LDA, NMF, BERTopic",
+        "Large Language Models (LLMs): scaling laws, RLHF, instruction tuning",
+        "Prompt engineering: few-shot, chain-of-thought, tree-of-thought",
+        "Retrieval-Augmented Generation (RAG): indexing, retrieval, generation",
+        "LLM fine-tuning: LoRA, QLoRA, PEFT techniques"
+      ],
+      "projects": ["Sentiment analysis on Twitter data", "Named Entity Recognition system", "Text summarizer with transformers", "RAG chatbot with document retrieval"]
+    },
+    {
+      "stage": 7,
+      "title": "Computer Vision",
+      "duration": "4-6 weeks",
+      "description": "Learn computer vision fundamentals: image processing, object detection, segmentation, and generative vision models.",
+      "topics": [
+        "Image processing: filters, edge detection (Sobel, Canny), Hough transform",
+        "Feature extraction: SIFT, SURF, ORB, HOG",
+        "Image classification: CNN architectures, ImageNet, fine-tuning",
+        "Object detection: R-CNN, Fast R-CNN, Faster R-CNN, YOLO, SSD",
+        "Instance segmentation: Mask R-CNN, YOLACT",
+        "Semantic segmentation: U-Net, DeepLab, FCN",
+        "Object tracking: SORT, DeepSORT, Kalman filters",
+        "Optical flow: Lucas-Kanade, Farneback, RAFT",
+        "Image generation: GANs, diffusion models, DALL-E, Stable Diffusion",
+        "3D vision: stereo vision, structure from motion, NeRF",
+        "Video understanding: action recognition, video captioning",
+        "Vision Transformers (ViT): patches, positional embeddings, classification",
+        "Multimodal models: CLIP, BLIP, Flamingo",
+        "Face recognition: FaceNet, ArcFace, DeepFace",
+        "Medical image analysis: segmentation, classification, detection",
+        "Autonomous driving perception: lane detection, obstacle detection"
+      ],
+      "projects": ["Real-time object detection with YOLO", "Image segmentation for medical images", "Face recognition system", "Image captioning with vision transformers"]
+    },
+    {
+      "stage": 8,
+      "title": "Reinforcement Learning",
+      "duration": "4-5 weeks",
+      "description": "Learn RL from basic bandits to deep RL: value-based, policy-based, model-based methods, and multi-agent systems.",
+      "topics": [
+        "Markov Decision Processes (MDP): formal definition, Bellman equations",
+        "Dynamic programming: policy iteration, value iteration",
+        "Monte Carlo methods: first-visit, every-visit, exploring starts",
+        "Temporal Difference (TD) learning: TD(0), SARSA, Q-learning",
+        "Eligibility traces: TD(λ), SARSA(λ)",
+        "Function approximation in RL: linear, neural network",
+        "Deep Q-Networks (DQN): experience replay, target network",
+        "DQN improvements: Double DQN, Dueling DQN, Prioritized Replay",
+        "Policy gradient methods: REINFORCE, actor-critic",
+        "Advanced policy gradients: PPO, TRPO, A2C, A3C",
+        "Deterministic policy gradients: DDPG, TD3, SAC",
+        "Model-based RL: Dyna-Q, MuZero, Dreamer",
+        "Inverse Reinforcement Learning (IRL) and Imitation Learning",
+        "Exploration vs exploitation: UCB, Thompson sampling, intrinsic motivation",
+        "Multi-agent RL: independent, centralized, mixed approaches",
+        "RL for robotics: sim-to-real, domain randomization",
+        "RL for games: AlphaGo, AlphaZero, OpenAI Five"
+      ],
+      "projects": ["CartPole balancing with DQN", "Atari game playing agent", "Robot navigation with PPO", "Multi-agent soccer simulation"]
+    },
+    {
+      "stage": 9,
+      "title": "AI Ethics, Safety & Alignment",
+      "duration": "2-3 weeks",
+      "description": "Understand AI ethics, bias, fairness, interpretability, safety, and alignment with human values.",
+      "topics": [
+        "AI ethics frameworks: fairness, accountability, transparency, explainability",
+        "Bias in AI: data bias, algorithmic bias, measurement bias, representation bias",
+        "Fairness metrics: demographic parity, equal opportunity, equalized odds",
+        "Explainable AI (XAI): LIME, SHAP, Grad-CAM, integrated gradients",
+        "Model interpretability: intrinsic vs post-hoc, global vs local",
+        "Privacy: differential privacy, federated learning, on-device ML",
+        "Robustness: adversarial attacks and defenses (FGSM, PGD, adversarial training)",
+        "AI safety: specification gaming, reward hacking, distributional shift",
+        "Alignment problem: outer alignment, inner alignment, goal misgeneralization",
+        "AI governance: regulations (EU AI Act), auditing, certification",
+        "Risks from advanced AI: misuse, accidents, existential risk",
+        "Responsible AI development: red teaming, evaluation, monitoring",
+        "Environmental impact of AI: compute cost, energy, carbon footprint",
+        "AI for social good: healthcare, climate, education, accessibility"
+      ],
+      "projects": ["Bias audit of ML model with fairness metrics", "SHAP explainability dashboard", "Adversarial attack/defense demo", "Federated learning simulation"]
+    },
+    {
+      "stage": 10,
+      "title": "Advanced AI Topics & Research",
+      "duration": "4-6 weeks",
+      "description": "Explore cutting-edge AI: multi-modal models, foundation models, reasoning, planning, and AI agent systems.",
+      "topics": [
+        "Foundation models: GPT-4, Claude, Gemini, Llama — architecture and capabilities",
+        "Multi-modal AI: vision-language models, speech-text integration",
+        "Retrieval-Augmented Generation (RAG): advanced indexing, hybrid search, re-ranking",
+        "AI agents: tool use, planning, memory, reflection (ReAct, AutoGPT, LangChain)",
+        "Chain-of-thought reasoning: zero-shot, few-shot, tree-of-thought, graph-of-thought",
+        "Constitutional AI and RLHF for alignment",
+        "Mixture of Experts (MoE) architecture",
+        "Long-context transformers: RoPE scaling, RingAttention, Infini-Attention",
+        "Efficient AI: quantization (GPTQ, AWQ), pruning, distillation, FlashAttention",
+        "AI for science: AlphaFold, drug discovery, weather prediction",
+        "Edge AI: on-device inference, TinyML, mobile models",
+        "Neural-symbolic AI: combining neural networks with symbolic reasoning",
+        "Causal AI: causal discovery, causal inference, do-calculus",
+        "Evolutionary and neuroevolution approaches",
+        "Quantum machine learning: quantum neural networks, variational circuits",
+        "Neuromorphic computing: spiking neural networks, event-based computation"
+      ],
+      "projects": ["Multi-modal RAG system for documents", "AI agent with tool use and planning", "Model quantization and deployment", "Scientific paper summarization system"]
+    }
+  ],
+
+  "resources": [
+    { "name": "Stanford CS221: AI", "url": "https://stanford-cs221.github.io/", "type": "Course", "difficulty": "all", "free": true, "official": true },
+    { "name": "Stanford CS229: ML", "url": "https://cs229.stanford.edu", "type": "Course", "difficulty": "advanced", "free": true, "official": true },
+    { "name": "MIT 6.034: AI", "url": "https://ocw.mit.edu/courses/6-034-artificial-intelligence-fall-2010/", "type": "Course", "difficulty": "all", "free": true, "official": true },
+    { "name": "Berkeley CS188: Intro to AI", "url": "https://ai.berkeley.edu", "type": "Course", "difficulty": "beginner", "free": true, "official": true },
+    { "name": "Artificial Intelligence: A Modern Guide (AIMA)", "url": "https://aima.cs.berkeley.edu", "type": "Reference", "difficulty": "all", "free": true, "official": false },
+    { "name": "Google AI Education", "url": "https://ai.google/education/", "type": "Tutorial", "difficulty": "all", "free": true, "official": true },
+    { "name": "DeepLearning.AI (Coursera)", "url": "https://www.deeplearning.ai", "type": "Course", "difficulty": "all", "free": false, "official": false },
+    { "name": "OpenAI Research", "url": "https://openai.com/research", "type": "Article", "difficulty": "advanced", "free": true, "official": true },
+    { "name": "DeepMind Research", "url": "https://www.deepmind.com/research", "type": "Article", "difficulty": "advanced", "free": true, "official": true },
+    { "name": "Papers With Code", "url": "https://paperswithcode.com", "type": "Reference", "difficulty": "advanced", "free": true, "official": false },
+    { "name": "ArXiv Sanity (AI Papers)", "url": "https://arxiv-sanity-lite.com", "type": "Reference", "difficulty": "advanced", "free": true, "official": false },
+    { "name": "Distill.pub", "url": "https://distill.pub", "type": "Article", "difficulty": "intermediate", "free": true, "official": false },
+    { "name": "Hugging Face Course", "url": "https://huggingface.co/learn/nlp-course", "type": "Course", "difficulty": "intermediate", "free": true, "official": true },
+    { "name": "fast.ai Practical Deep Learning", "url": "https://course.fast.ai", "type": "Course", "difficulty": "beginner", "free": true, "official": false },
+    { "name": "The Annotated Transformer", "url": "https://nlp.seas.harvard.edu/2018/04/03/attention.html", "type": "Tutorial", "difficulty": "advanced", "free": true, "official": false },
+    { "name": "3Blue1Brown Neural Networks", "url": "https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi", "type": "Video", "difficulty": "beginner", "free": true, "official": false },
+    { "name": "AI Alignment Forum", "url": "https://www.alignmentforum.org", "type": "Reference", "difficulty": "advanced", "free": true, "official": false },
+    { "name": "OpenAI Spinning Up (RL)", "url": "https://spinningup.openai.com", "type": "Tutorial", "difficulty": "advanced", "free": true, "official": true },
+    { "name": "Awesome AI (GitHub)", "url": "https://github.com/owainlewis/awesome-artificial-intelligence", "type": "Reference", "difficulty": "all", "free": true, "official": false },
+    { "name": "Gradient Descent (Interactive)", "url": "https://www.deeplearning.ai/ai-notes/optimization/", "type": "Tutorial", "difficulty": "intermediate", "free": true, "official": false },
+    { "name": "Neural Networks and Deep Learning (Nielsen)", "url": "http://neuralnetworksanddeeplearning.com", "type": "Tutorial", "difficulty": "beginner", "free": true, "official": false }
+  ],
+
+  "cheatSheets": [
+    { "name": "AI Algorithms Cheat Sheet", "url": "https://www.analyticsvidhya.com/blog/2015/09/ai-cheat-sheet/", "source": "Analytics Vidhya", "topics": ["algorithms", "search", "planning", "logic"], "format": "Web" },
+    { "name": "Probability & Statistics for AI", "url": "https://static.sifive.com/probability_cheatsheet.pdf", "source": "Stanford", "topics": ["probability", "statistics", "distributions"], "format": "PDF" },
+    { "name": "Calculus & Linear Algebra for ML", "url": "https://stanford.edu/~shervine/teaching/cs-229/refresher-algebra-calculus", "source": "Stanford CS229", "topics": ["calculus", "linear-algebra", "optimization"], "format": "Web" },
+    { "name": "Deep Learning Architectures", "url": "https://www.deeplearning.ai/ai-notes/optimization/", "source": "DeepLearning.AI", "topics": ["neural-networks", "architectures", "CNN", "RNN"], "format": "Web" }
+  ],
+
+  "interviewQuestions": [
+    { "question": "What is the difference between AI, ML, and Deep Learning?", "answer": "AI is the broad field of creating intelligent machines. ML is a subset of AI where systems learn from data without explicit programming. Deep Learning is a subset of ML using multi-layered neural networks to learn hierarchical representations. All DL is ML, all ML is AI, but not vice versa. Example: rule-based chess AI is not ML; linear regression is ML; CNNs for image classification is DL.", "difficulty": "Easy", "topic": "Fundamentals" },
+    { "question": "Explain the A* search algorithm and its optimality.", "answer": "A* combines the cost to reach a node (g) and a heuristic estimate to the goal (h). It maintains an open set prioritized by f = g + h. A* is optimal if the heuristic is admissible (never overestimates) and consistent (h(n) <= c(n,a,n') + h(n')). A* is complete if branching factor is finite. Dijkstra is A* with h=0.", "difficulty": "Medium", "topic": "Search" },
+    { "question": "What is the difference between supervised, unsupervised, and reinforcement learning?", "answer": "Supervised: learns from labeled data (input, output pairs), goal is to map inputs to outputs. Unsupervised: discovers hidden patterns in unlabeled data (clustering, dimensionality reduction). Reinforcement: learns through interaction by maximizing cumulative reward, no labels, learns from consequences of actions.", "difficulty": "Easy", "topic": "ML" },
+    { "question": "What is the attention mechanism and why is it important?", "answer": "Attention allows models to focus on relevant parts of the input when producing output. It computes weighted sums of values based on query-key similarity. Self-attention (transformers) allows each position to attend to all positions, capturing long-range dependencies without recurrence. Multi-head attention runs multiple attention operations in parallel. Attention enabled LLMs by solving the long-range dependency bottleneck of RNNs.", "difficulty": "Medium", "topic": "Deep Learning" },
+    { "question": "What is overfitting and how do you prevent it?", "answer": "Overfitting is when a model learns training data too well, including noise, and fails to generalize to new data. Signs: high training accuracy but poor validation accuracy. Prevention: more training data, cross-validation, regularization (L1, L2), dropout (neural networks), early stopping, reducing model complexity, feature selection, data augmentation, ensemble methods.", "difficulty": "Easy", "topic": "ML" },
+    { "question": "Explain the bias-variance tradeoff.", "answer": "Bias is error from overly simplistic models (underfitting) — wrong assumptions about the data. Variance is error from overly complex models (overfitting) — sensitive to training data fluctuations. High bias: models miss relevant patterns. High variance: models learn noise. The tradeoff: increasing complexity reduces bias but increases variance. Optimal model balances both for minimum total error.", "difficulty": "Medium", "topic": "ML" },
+    { "question": "What are generative vs discriminative models?", "answer": "Generative models learn P(X, Y) — joint distribution of inputs and labels — and can generate new data. Examples: Naive Bayes, GANs, VAEs, diffusion models. Discriminative models learn P(Y|X) — conditional probability of label given input — focusing on decision boundary. Examples: logistic regression, SVM, neural networks. Generative models can create data; discriminative models typically have higher classification accuracy.", "difficulty": "Medium", "topic": "ML" }
+  ],
+
+  "books": [
+    { "title": "Artificial Intelligence: A Modern Approach", "author": "Stuart Russell & Peter Norvig", "description": "The definitive AI textbook covering everything from search and logic to ML, NLP, robotics, and AI ethics. Used at top universities worldwide.", "url": "https://aima.cs.berkeley.edu", "pages": 1152, "year": 2020, "difficulty": "all" },
+    { "title": "Deep Learning", "author": "Ian Goodfellow, Yoshua Bengio, Aaron Courville", "description": "The MIT Press deep learning textbook covering mathematical foundations, neural network architectures, and advanced topics.", "url": "https://www.deeplearningbook.org", "pages": 800, "year": 2016, "difficulty": "advanced" },
+    { "title": "Reinforcement Learning: An Introduction", "author": "Richard Sutton & Andrew Barto", "description": "The classic RL textbook covering bandits, DP, TD learning, policy gradients, and advanced RL algorithms.", "url": "https://www.oreilly.com/library/view/reinforcement-learning-an/9780262039246/", "pages": 560, "year": 2018, "difficulty": "advanced" },
+    { "title": "Speech and Language Processing", "author": "Dan Jurafsky & James H. Martin", "description": "Comprehensive NLP textbook covering text processing, syntax, semantics, dialogue, and modern LLMs.", "url": "https://web.stanford.edu/~jurafsky/slp3/", "pages": 600, "year": 2024, "difficulty": "intermediate" },
+    { "title": "Computer Vision: Algorithms and Applications", "author": "Richard Szeliski", "description": "Comprehensive CV textbook covering image formation, feature detection, segmentation, object recognition, and 3D vision.", "url": "https://szeliski.org/Book/", "pages": 979, "year": 2022, "difficulty": "advanced" },
+    { "title": "The Quest for Artificial Intelligence", "author": "Nils J. Nilsson", "description": "A fascinating history of AI from its origins to modern systems, covering key developments and researchers.", "url": "https://www.oreilly.com/library/view/the-quest-for/9780521122931/", "pages": 600, "year": 2009, "difficulty": "beginner" }
+  ],
+
+  "projects": [
+    { "title": "A* Pathfinding Visualizer", "description": "Interactive visualization of A* algorithm on grid maps with obstacles, different heuristics, and step-by-step animation.", "difficulty": "Intermediate", "techStack": ["Python", "Pygame/Streamlit"], "topics": ["Search", "Heuristics", "Visualization"] },
+    { "title": "Bayesian Spam Classifier", "description": "Build a Naive Bayes classifier for email spam detection with feature extraction, training, evaluation, and cross-validation.", "difficulty": "Intermediate", "techStack": ["Python", "scikit-learn", "NLTK"], "topics": ["Classification", "NLP", "Probability"] },
+    { "title": "Image Captioning with Attention", "description": "Encoder-decoder model with attention for generating image captions using CNN features and LSTM/Transformer decoder.", "difficulty": "Advanced", "techStack": ["PyTorch", "ResNet", "Transformers"], "topics": ["Deep Learning", "Computer Vision", "NLP"] },
+    { "title": "Atari Game Playing Agent", "description": "Deep Q-Learning agent that learns to play Atari games from pixel input with experience replay and target network.", "difficulty": "Advanced", "techStack": ["PyTorch", "OpenAI Gym", "CNN"], "topics": ["Reinforcement Learning", "DQN", "Game AI"] },
+    { "title": "RAG Chatbot with Document Retrieval", "description": "Retrieval-augmented generation chatbot that answers questions based on uploaded documents using embeddings and LLM.", "difficulty": "Advanced", "techStack": ["LangChain", "OpenAI/LLaMA", "ChromaDB", "Streamlit"], "topics": ["NLP", "RAG", "LLMs"] },
+    { "title": "Autonomous Driving Perception Pipeline", "description": "Object detection, lane detection, and segmentation pipeline for autonomous driving perception using camera input.", "difficulty": "Advanced", "techStack": ["PyTorch", "YOLO", "OpenCV"], "topics": ["Computer Vision", "Object Detection", "Autonomous Systems"] }
+  ],
+
+  "videoResources": [
+    { "title": "Stanford CS221: AI Full Course", "platform": "YouTube", "url": "https://www.youtube.com/playlist?list=PLoROMvodv4rO1NB9TD4iUZ3qghGEGtqNX", "duration": "Full Course", "difficulty": "all", "channel": "Stanford Online" },
+    { "title": "MIT 6.034: Artificial Intelligence", "platform": "YouTube", "url": "https://www.youtube.com/playlist?list=PLUl4u3cNGP63gFHB6xb-kVBiQHYeUV4Se", "duration": "Full Course", "difficulty": "all", "channel": "MIT OCW" },
+    { "title": "Introduction to AI (Berkeley CS188)", "platform": "YouTube", "url": "https://www.youtube.com/playlist?list=PLsOUugYMBBJENfZ3XAToMsgEqW3M6i2LJ", "duration": "Full Course", "difficulty": "beginner", "channel": "UC Berkeley" },
+    { "title": "3Blue1Brown: Neural Networks", "platform": "YouTube", "url": "https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi", "duration": "2 hours", "difficulty": "beginner", "channel": "3Blue1Brown" },
+    { "title": "Attention and Transformers", "platform": "YouTube", "url": "https://www.youtube.com/watch?v=4Bdc55j80l8", "duration": "1 hour", "difficulty": "intermediate", "channel": "3Blue1Brown" },
+    { "title": "Reinforcement Learning Course (David Silver)", "platform": "YouTube", "url": "https://www.youtube.com/playlist?list=PLqYmG7hTraZBiG_XpjnPrSNw-1nQTrW8e", "duration": "Full Course", "difficulty": "advanced", "channel": "DeepMind" },
+    { "title": "AI Explained (News & Research)", "platform": "YouTube", "url": "https://www.youtube.com/@aiexplained-official", "duration": "Ongoing", "difficulty": "all", "channel": "AI Explained" },
+    { "title": "Yannic Kilcher (AI Research)", "platform": "YouTube", "url": "https://www.youtube.com/@YannicKilcher", "duration": "Ongoing", "difficulty": "advanced", "channel": "Yannic Kilcher" }
+  ],
+
+  "bestPractices": [
+    "Start simple — use a simple baseline (linear model, heuristic) before complex deep learning",
+    "Always split data into train/validation/test sets — never let test data influence model decisions",
+    "Use cross-validation when working with small datasets",
+    "Normalize/standardize features for gradient-based learning methods",
+    "Use appropriate evaluation metrics — accuracy is misleading for imbalanced datasets",
+    "Monitor for data leakage — ensure no information from the future/test set leaks into training",
+    "Version control datasets, models, and experiments (DVC, MLflow, Weights & Biases)",
+    "Use reproducible random seeds for experiments",
+    "Log all experiments: hyperparameters, metrics, model artifacts",
+    "Document assumptions, data sources, preprocessing steps, and model limitations",
+    "Start with interpretable models when possible — explainability is crucial for production",
+    "Test on edge cases and distribution shifts before deployment",
+    "Implement monitoring for model drift and data drift in production",
+    "Follow ethical AI guidelines: fairness audits, bias testing, privacy protection",
+    "Use appropriate hardware — start with CPU/small models, scale to GPU/TPU as needed",
+    "Keep up with research — the field advances rapidly, follow arXiv, Twitter, conferences",
+    "Prefer simple solutions: if a rule-based system works, don't build a neural network",
+    "Always baseline against random/naive predictions to validate your model adds value"
+  ],
+
+  "careerOpportunities": [
+    { "role": "AI Research Scientist", "description": "Conduct original research to advance AI capabilities, publish papers at top conferences, and develop novel algorithms.", "skills": ["Deep Learning", "Mathematics", "Research Methods", "PyTorch/TF", "Paper Writing"] },
+    { "role": "AI Engineer", "description": "Build and deploy AI systems, implement ML models, optimize inference, and integrate AI into products.", "skills": ["Python", "PyTorch/TF", "MLOps", "Docker", "REST APIs", "Cloud"] },
+    { "role": "NLP Engineer", "description": "Build natural language processing systems including chatbots, information extraction, translation, and text analytics.", "skills": ["NLP", "Transformers", "Python", "RAG", "LLM Fine-tuning", "Hugging Face"] },
+    { "role": "Computer Vision Engineer", "description": "Develop visual recognition systems for object detection, segmentation, face recognition, and video analysis.", "skills": ["Computer Vision", "OpenCV", "PyTorch", "CNN Architectures", "Image Processing"] },
+    { "role": "Reinforcement Learning Engineer", "description": "Design RL agents for robotics, games, recommendation systems, and autonomous decision-making.", "skills": ["RL Algorithms", "Python", "Simulation", "PyTorch", "Math/Stats"] },
+    { "role": "AI Safety/Alignment Researcher", "description": "Research how to ensure AI systems are safe, aligned with human values, robust, and interpretable.", "skills": ["AI", "ML Theory", "Ethics", "Research", "Technical Writing"] }
+  ],
+
+  "roadmap": [
+    "AI Foundations & Mathematics",
+    "Problem Solving & Search Algorithms",
+    "Probability, Uncertainty & Bayesian Methods",
+    "Machine Learning Fundamentals",
+    "Deep Learning & Neural Networks",
+    "Natural Language Processing",
+    "Computer Vision",
+    "Reinforcement Learning",
+    "AI Ethics, Safety & Alignment",
+    "Advanced AI Topics & Research"
+  ],
+
+  "related": ["machine-learning", "deep-learning", "nlp", "computer-vision", "reinforcement-learning", "data-science"]
+}

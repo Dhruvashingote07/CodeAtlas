@@ -1,0 +1,373 @@
+{
+  "id": "docker",
+  "slug": "docker",
+  "name": "Docker",
+  "icon": "🐳",
+  "color": "#2496ED",
+  "category": "DevOps",
+  "description": "A platform for developing, shipping, and running applications in lightweight, portable containers. Standardizes application packaging and deployment across environments.",
+  "difficulty": "Intermediate",
+  "paradigms": ["Containerization", "Immutable Infrastructure", "Microservices", "Infrastructure as Code"],
+  "tags": ["docker", "containers", "devops", "containerization", "deployment", "images", "docker-compose"],
+  "overview": "Docker revolutionized software development by making containers mainstream — packaging applications with all their dependencies into standardized, lightweight, and portable units. Launched in 2013, Docker uses OS-level virtualization to deliver software in packages called containers. Unlike VMs, containers share the host OS kernel, making them much more efficient. Docker provides tooling for building images (Dockerfile), sharing them (Docker Hub/registries), composing multi-service applications (Docker Compose), and orchestrating clusters (Docker Swarm, Kubernetes). The Docker ecosystem has become essential for DevOps, microservices, CI/CD pipelines, and cloud-native development. Docker ensures consistency across development, testing, and production environments — eliminating the 'it works on my machine' problem. Major cloud providers support Docker containers natively.",
+
+  "learningPath": [
+    {
+      "stage": 1,
+      "title": "Docker Fundamentals",
+      "duration": "2 weeks",
+      "description": "Understand container concepts, Docker architecture, and basic commands for managing containers and images.",
+      "topics": [
+        "What are containers? Containers vs Virtual Machines",
+        "Docker architecture: client, daemon, containerd, runc",
+        "Installing Docker Desktop (Windows/Mac) and Docker Engine (Linux)",
+        "Docker Hub — finding and pulling public images",
+        "docker run: creating and starting containers",
+        "docker ps: listing running and all containers",
+        "docker images: managing local images",
+        "docker pull, push: image distribution",
+        "docker stop, start, restart, rm: container lifecycle",
+        "docker logs: viewing container output",
+        "docker exec: running commands in running containers",
+        "docker inspect: detailed container/image metadata",
+        "Container naming and tagging images",
+        "Interactive mode (-it), detached mode (-d), port mapping (-p)",
+        "Understanding container isolation: namespaces and cgroups"
+      ],
+      "projects": ["Run Nginx container with port mapping", "Run PostgreSQL container with volume", "Containerized Hello World application", "Explore Docker Hub and run various images"]
+    },
+    {
+      "stage": 2,
+      "title": "Docker Images & Dockerfile",
+      "duration": "2-3 weeks",
+      "description": "Master creating custom Docker images using Dockerfiles with efficient layer caching and best practices.",
+      "topics": [
+        "Dockerfile syntax and instructions overview",
+        "FROM: choosing base images (Alpine, Slim, Distroless)",
+        "RUN: executing commands during build",
+        "COPY vs ADD: adding files to images",
+        "WORKDIR: setting working directory",
+        "ENV and ARG: build-time and runtime variables",
+        "EXPOSE: documenting container ports",
+        "CMD vs ENTRYPOINT: default commands and executable entrypoints",
+        "CMD + ENTRYPOINT combination pattern",
+        "Layer caching: order of instructions, cache invalidation",
+        "Multi-stage builds: compile in one stage, run in another",
+        "Minimizing image size: Alpine base, cleaning apt caches, .dockerignore",
+        "docker build: building images, tagging, build context",
+        "docker commit: creating images from containers",
+        "Health checks with HEALTHCHECK instruction",
+        "LABEL: adding metadata to images",
+        "USER: running as non-root for security",
+        "VOLUME: declaring mount points"
+      ],
+      "projects": ["Node.js app Dockerfile with multi-stage build", "Python Flask API minimal Dockerfile", "Go binary Dockerfile (scratch base)", "Optimizing image size from 1GB to 100MB"]
+    },
+    {
+      "stage": 3,
+      "title": "Docker Volumes & Data Persistence",
+      "duration": "1-2 weeks",
+      "description": "Learn Docker storage options: volumes, bind mounts, tmpfs, and data management patterns.",
+      "topics": [
+        "Container filesystem and ephemeral nature",
+        "Volumes: managed by Docker, stored in /var/lib/docker/volumes",
+        "Creating and managing volumes (docker volume create, ls, inspect, prune)",
+        "Bind mounts: mounting host directories into containers",
+        "tmpfs mounts: in-memory storage for temporary data",
+        "Named volumes vs anonymous volumes",
+        "Volume drivers and plugins (NFS, cloud, etc.)",
+        "Backing up and restoring volumes",
+        "Sharing data between containers (volume containers)",
+        "Read-only mounts for security",
+        "Docker storage drivers: overlay2, aufs, devicemapper",
+        "Copy-on-write (CoW) and layer sharing",
+        "Understanding container size and disk usage",
+        "docker system df for disk usage analysis"
+      ],
+      "projects": ["PostgreSQL persistent database volume", "File upload service with bind mount", "Database backup container", "Shared configuration volume across services"]
+    },
+    {
+      "stage": 4,
+      "title": "Docker Networking",
+      "duration": "2 weeks",
+      "description": "Understand Docker networking: bridge, host, overlay networks, and container communication patterns.",
+      "topics": [
+        "Docker networking model: CNM (Container Network Model)",
+        "Bridge network: default, custom bridge, DNS resolution",
+        "Host network: sharing host network stack",
+        "None network: isolated container",
+        "Overlay network: multi-host communication (Swarm)",
+        "Macvlan network: assigning MAC addresses to containers",
+        "docker network: create, ls, inspect, connect, disconnect",
+        "Container-to-container communication",
+        "Exposing ports (-p, --publish) and publishing modes",
+        "Embedded DNS for service discovery",
+        "Network isolation and security",
+        "Connecting to external networks",
+        "Network aliases and container naming",
+        "Legacy container links (--link, deprecated)",
+        "Network drivers and plugins",
+        "Troubleshooting network issues (docker network inspect, docker exec ping)"
+      ],
+      "projects": ["Multi-container app with custom bridge network", "Nginx reverse proxy to web app containers", "Network isolation between frontend and database", "Cross-host networking setup"]
+    },
+    {
+      "stage": 5,
+      "title": "Docker Compose",
+      "duration": "2-3 weeks",
+      "description": "Orchestrate multi-container applications with Docker Compose for development and testing environments.",
+      "topics": [
+        "What is Docker Compose? Defining multi-service applications",
+        "docker-compose.yml: services, networks, volumes",
+        "Service definition: image, build, ports, environment, volumes",
+        "docker-compose up, down, ps, logs, exec, build",
+        "Environment variables in Compose (.env file, environment, env_file)",
+        "Service dependencies: depends_on, healthcheck, wait-for-it",
+        "Networks in Compose: default, custom, external networks",
+        "Volumes in Compose: named, bind mounts, tmpfs",
+        "Profiles for selective service activation",
+        "Multiple Compose files and merging (docker-compose.override.yml)",
+        "Scaling services (docker-compose up --scale)",
+        "Health checks and restart policies in Compose",
+        "Resource constraints (mem_limit, cpus)",
+        "Compose for development vs production differences",
+        "Docker Compose with watch mode for hot reload",
+        "Integrating Compose with CI/CD pipelines"
+      ],
+      "projects": ["WordPress with MySQL using Compose", "MEAN/MERN stack with Compose", "Development environment for web app (API + DB + Redis)", "Monitoring stack (Prometheus + Grafana) with Compose"]
+    },
+    {
+      "stage": 6,
+      "title": "Docker in Development Workflows",
+      "duration": "2 weeks",
+      "description": "Integrate Docker into development workflows: hot reloading, debugging, testing, and team collaboration.",
+      "topics": [
+        "Development vs production Dockerfiles",
+        "Bind mounts for hot-reloading in development",
+        "Docker for local development environments",
+        "Docker for running tests in CI (reproducible environments)",
+        "Docker Dev Environments (Docker Desktop feature)",
+        "Debugging applications in containers",
+        "Reading container logs and structured logging",
+        "Environment-specific configurations with Docker",
+        "Managing multiple projects with Docker",
+        "Docker + IDE integration (VS Code Dev Containers)",
+        "GitHub Codespaces with devcontainer.json",
+        "Docker for monorepo development",
+        "Database containers for development and testing",
+        "Overriding entrypoints and commands for debugging"
+      ],
+      "projects": ["VS Code Dev Container for Python/Node project", "CI pipeline running tests in Docker", "Development environment with database seeding", "Hot-reload Docker setup for React + Express"]
+    },
+    {
+      "stage": 7,
+      "title": "Docker Security & Best Practices",
+      "duration": "2 weeks",
+      "description": "Secure Docker containers: image scanning, least privilege, secrets management, and security best practices.",
+      "topics": [
+        "Container security principles: least privilege, defense in depth",
+        "Running containers as non-root user",
+        "Read-only root filesystem",
+        "Docker Content Trust (DCT) and image signing",
+        "Image scanning: Trivy, Snyk, Docker Scout",
+        "Secrets management: Docker secrets (Swarm), build secrets",
+        "Environment variables and sensitive data",
+        "Resource limits (CPU, memory, PIDs) to prevent DoS",
+        "Docker Bench Security for CIS benchmark auditing",
+        "Seccomp, AppArmor, and SELinux profiles",
+        "Capabilities: dropping all, adding specific ones",
+        "User namespaces and rootless mode",
+        "Securing the Docker daemon (TLS, socket, access)",
+        "Network security: firewalls, network policies",
+        "Image vulnerability scanning in CI/CD",
+        "Supply chain security: base image verification (Docker Official Images, distroless)"
+      ],
+      "projects": ["Harden a Dockerfile with security best practices", "Docker Bench Security audit script", "Secrets management with build secrets", "Vulnerability scan pipeline for images"]
+    },
+    {
+      "stage": 8,
+      "title": "Docker in Production",
+      "duration": "2-3 weeks",
+      "description": "Deploy and manage Docker containers in production: logging, monitoring, orchestration, and scaling.",
+      "topics": [
+        "Production Docker considerations: restart policies, health checks",
+        "Docker logging drivers: json-file, syslog, journald, fluentd, awslogs",
+        "Log management: centralized logging with ELK/Loki",
+        "Monitoring containers: docker stats, cAdvisor, Prometheus",
+        "Resource management: CPU shares, memory limits, OOM handling",
+        "Container orchestration overview (Docker Swarm vs Kubernetes)",
+        "Docker Swarm: init, join nodes, services, stacks, secrets",
+        "Swarm services: replicas, update config, rolling updates",
+        "Docker stacks: deploying Compose files to Swarm",
+        "Rolling updates, rollback, and blue-green deployment",
+        "Service discovery and load balancing in Swarm",
+        "Running Docker on cloud: AWS ECS, Azure ACI, Google Cloud Run",
+        "Docker and CI/CD integration",
+        "Backup and disaster recovery for Docker hosts",
+        "Capacity planning and resource sizing"
+      ],
+      "projects": ["Docker Swarm cluster setup", "Production Compose file with health checks and monitoring", "cAdvisor + Prometheus monitoring for Docker", "Blue-green deployment script"]
+    },
+    {
+      "stage": 9,
+      "title": "Docker with CI/CD & Automation",
+      "duration": "2 weeks",
+      "description": "Integrate Docker into CI/CD pipelines: automated builds, testing, and deployment workflows.",
+      "topics": [
+        "Docker in GitHub Actions: building, testing, pushing images",
+        "GitLab CI/CD with Docker: services, dind (Docker-in-Docker)",
+        "Jenkins with Docker: pipelines, agents, container builds",
+        "Automated image building on git push (Docker Hub, GitHub Container Registry)",
+        "Testing in containers: parallel test execution, database containers",
+        "Multi-stage builds for CI optimization",
+        "Caching Docker builds in CI (layer caching, image caching)",
+        "Semantic versioning and tagging for Docker images",
+        "Docker registry management: Docker Hub, ECR, GCR, ACR, GHCR",
+        "Image promotion between environments (dev → staging → prod)",
+        "Security scanning in CI pipeline",
+        "GitOps with Docker (Argo CD, Flux for containerized apps)"
+      ],
+      "projects": ["GitHub Actions workflow: build, scan, push Docker image", "GitLab CI pipeline with multi-stage Docker build", "Automated image tagging and registry promotion", "CI pipeline running tests with Docker services"]
+    },
+    {
+      "stage": 10,
+      "title": "Advanced Docker & Ecosystem",
+      "duration": "2-3 weeks",
+      "description": "Explore advanced Docker: Kubernetes integration, Docker Desktop alternatives, rootless Docker, and Docker alternatives.",
+      "topics": [
+        "Docker vs Podman: daemonless, rootless alternatives",
+        "Docker vs containerd vs CRI-O vs nerdctl",
+        "Building Docker images without Docker (Buildah, Kaniko, img)",
+        "Rootless Docker for enhanced security",
+        "Docker with WSL2 (Windows Subsystem for Linux)",
+        "Kubernetes with Docker: transitioning from Docker Compose to K8s",
+        "Kompose: translating Compose files to Kubernetes manifests",
+        "Docker Desktop Kubernetes integration (local K8s)",
+        "Docker Machine: provisioning Docker hosts (legacy)",
+        "Docker Registry: running private registry",
+        "Docker Registry Advanced: garbage collection, cleanup, auth",
+        "Webhook triggers for automatic deployments",
+        "Docker plugin system: volume, network, authorization plugins",
+        "Docker API and SDK for programmatic management",
+        "Edge computing with Docker",
+        "Container-optimized OSes: Alpine, CoreOS, Flatcar, RancherOS"
+      ],
+      "projects": ["Private Docker Registry with auth and UI", "Podman migration from Docker", "Kompose translation: Compose to Kubernetes", "Docker SDK script for bulk container management"]
+    }
+  ],
+
+  "resources": [
+    { "name": "Docker Official Documentation", "url": "https://docs.docker.com", "type": "Official", "difficulty": "all", "free": true, "official": true },
+    { "name": "Docker Hub", "url": "https://hub.docker.com", "type": "Tool", "difficulty": "all", "free": true, "official": true },
+    { "name": "Dockerfile Reference", "url": "https://docs.docker.com/engine/reference/builder/", "type": "Documentation", "difficulty": "all", "free": true, "official": true },
+    { "name": "Docker Compose Reference", "url": "https://docs.docker.com/compose/compose-file/", "type": "Documentation", "difficulty": "intermediate", "free": true, "official": true },
+    { "name": "Play with Docker (Online Lab)", "url": "https://labs.play-with-docker.com", "type": "Tool", "difficulty": "all", "free": true, "official": false },
+    { "name": "Docker 101 Tutorial", "url": "https://www.docker.com/101-tutorial/", "type": "Tutorial", "difficulty": "beginner", "free": true, "official": true },
+    { "name": "Docker Captains (Community)", "url": "https://www.docker.com/community/captains/", "type": "Reference", "difficulty": "all", "free": true, "official": true },
+    { "name": "Awesome Docker (GitHub)", "url": "https://github.com/veggiemonk/awesome-docker", "type": "Reference", "difficulty": "all", "free": true, "official": false },
+    { "name": "Docker Security Best Practices", "url": "https://docs.docker.com/develop/dev-best-practices/", "type": "Documentation", "difficulty": "intermediate", "free": true, "official": true },
+    { "name": "Docker Bench Security", "url": "https://github.com/docker/docker-bench-security", "type": "Tool", "difficulty": "intermediate", "free": true, "official": true },
+    { "name": "Docker Curriculum", "url": "https://docker-curriculum.com", "type": "Tutorial", "difficulty": "beginner", "free": true, "official": false },
+    { "name": "Docker Compose in Production", "url": "https://docs.docker.com/compose/production/", "type": "Documentation", "difficulty": "advanced", "free": true, "official": true },
+    { "name": "Docker SDK for Python", "url": "https://docker-py.readthedocs.io", "type": "Documentation", "difficulty": "advanced", "free": true, "official": false },
+    { "name": "VSCode Dev Containers", "url": "https://code.visualstudio.com/docs/devcontainers/containers", "type": "Tutorial", "difficulty": "intermediate", "free": true, "official": true },
+    { "name": "Docker Swarm Overview", "url": "https://docs.docker.com/engine/swarm/", "type": "Documentation", "difficulty": "advanced", "free": true, "official": true },
+    { "name": "Docker Compose Specification", "url": "https://compose-spec.io", "type": "Reference", "difficulty": "intermediate", "free": true, "official": false }
+  ],
+
+  "cheatSheets": [
+    { "name": "Docker CLI Cheat Sheet", "url": "https://docs.docker.com/get-started/docker_cheatsheet.pdf", "source": "Docker", "topics": ["cli", "commands", "containers", "images"], "format": "PDF" },
+    { "name": "Dockerfile Cheat Sheet", "url": "https://quickref.me/dockerfile", "source": "QuickRef.me", "topics": ["dockerfile", "instructions", "best-practices"], "format": "Web" },
+    { "name": "Docker Compose Cheat Sheet", "url": "https://devhints.io/docker-compose", "source": "Devhints", "topics": ["compose", "services", "networks", "volumes"], "format": "Web" },
+    { "name": "Docker Networking Cheat Sheet", "url": "https://www.containership.io/docker-networking-cheat-sheet/", "source": "ContainerShip", "topics": ["networking", "bridge", "overlay"], "format": "Web" }
+  ],
+
+  "interviewQuestions": [
+    { "question": "What is the difference between a Docker image and a container?", "answer": "An image is a read-only template with instructions for creating containers — the blueprint. A container is a runnable instance of an image — the actual running process. Images are built with Dockerfile, stored in registries. Containers have writable layers (copy-on-write), can be started, stopped, moved, and deleted. Multiple containers can run from the same image.", "difficulty": "Easy", "topic": "Fundamentals" },
+    { "question": "Explain Docker multi-stage builds and their benefits.", "answer": "Multi-stage builds use multiple FROM statements in a Dockerfile. Each stage can use different base images. Only files from the final stage end up in the final image. Benefits: dramatically smaller images (no build tools, SDKs, or temp files in production), separation of build and runtime environments, no need for multiple Dockerfiles. Example: compile Go in golang:alpine stage, copy binary to scratch stage.", "difficulty": "Medium", "topic": "Dockerfile" },
+    { "question": "How does Docker networking work? Explain bridge, host, and overlay.", "answer": "Bridge (default): containers on same bridge can communicate via IP, isolated from outside. Host: container shares host network stack, no isolation but better performance. Overlay: connects containers across multiple Docker hosts (Swarm mode). Bridge is for single-host container communication. Host for performance-critical apps needing direct network access. Overlay for multi-host microservices.", "difficulty": "Medium", "topic": "Networking" },
+    { "question": "What is Docker Compose and when should you use it?", "answer": "Docker Compose defines and runs multi-container applications using a YAML file. It creates networks, volumes, and starts all services with one command. Use for: local development environments (app + DB + cache), testing infrastructure, CI services, simple production deployments (single host). Don't use for: multi-host deployments, production at scale (use Swarm/Kubernetes).", "difficulty": "Easy", "topic": "Compose" },
+    { "question": "How do you manage persistent data in Docker?", "answer": "Volumes: managed by Docker, stored in /var/lib/docker/volumes, backup/restore possible, recommended for persistent data. Bind mounts: mount host directory into container, good for development (hot-reload). tmpfs: in-memory storage, temporary data not persisted. Volumes are preferred for databases, bind mounts for development code, tmpfs for scratch data.", "difficulty": "Easy", "topic": "Storage" },
+    { "question": "What are Docker layers and how does caching work?", "answer": "Each Dockerfile instruction creates a layer. Docker caches each layer and reuses it on subsequent builds if the instruction and context haven't changed. Layer ordering matters: put infrequently-changing instructions first (package installs), then frequently-changing code last. Use .dockerignore to exclude unnecessary files from context. Cache invalidation: if a layer changes, all subsequent layers are rebuilt.", "difficulty": "Medium", "topic": "Images" },
+    { "question": "How do you secure a Docker container?", "answer": "Use minimal base images (Alpine, distroless), run as non-root user (USER directive), use read-only root filesystem, drop all capabilities then add needed ones (--cap-drop=ALL --cap-add=NET_BIND_SERVICE), use Docker Content Trust for image signing, scan images for vulnerabilities (Trivy, Snyk), use secrets management (Docker secrets, build secrets), set resource limits (memory, CPU), use security profiles (seccomp, AppArmor), enable user namespace remapping.", "difficulty": "Hard", "topic": "Security" },
+    { "question": "Explain the difference between CMD and ENTRYPOINT.", "answer": "Both specify what command runs when container starts. ENTRYPOINT defines the executable (fixed). CMD provides default arguments to ENTRYPOINT or a default command if no ENTRYPOINT. docker run arguments override CMD but append to ENTRYPOINT. Pattern: ENTRYPOINT ['executable'] with CMD ['default_args']. This allows easy overriding: docker run image --custom-flag.", "difficulty": "Medium", "topic": "Dockerfile" },
+    { "question": "How do you handle Docker container logs?", "answer": "Docker captures stdout/stderr from container processes. Logging drivers: json-file (default, written as JSON files), syslog, journald, gelf, fluentd, awslogs, splunk, etwlogs, gcplogs, logentries. Configure via --log-driver. For production: use centralized logging (ELK, Loki, Datadog). Never log to files inside containers — logs disappear with container. Use json-file with rotation (--log-opt max-size=10m --log-opt max-file=3).", "difficulty": "Medium", "topic": "Production" },
+    { "question": "How does Docker handle resource constraints?", "answer": "Docker uses cgroups to limit resources per container: --memory (RAM limit), --memory-reservation (soft limit), --cpus (CPU limit, fractional), --cpuset-cpus (specific CPU cores), --pids-limit (max processes). Overcommitting: sum of limits can exceed host capacity. OOM killer: Docker kills container exceeding memory limit. Use docker stats to monitor. Set resource limits on all production containers.", "difficulty": "Medium", "topic": "Production" },
+    { "question": "What is Docker Swarm and how does it compare to Kubernetes?", "answer": "Docker Swarm is Docker's native clustering and orchestration tool. Simpler setup, integrates with Docker CLI, uses YAML similar to Compose. Kubernetes has broader ecosystem, more features, better for complex deployments, larger community. Swarm is good for simpler deployments and teams already using Docker. K8s is better for large-scale, multi-cloud, complex orchestration needs.", "difficulty": "Medium", "topic": "Orchestration" }
+  ],
+
+  "books": [
+    { "title": "Docker Deep Dive", "author": "Nigel Poulton", "description": "Zero to Docker in one book covering containers, images, Dockerfiles, Compose, Swarm, and production operations.", "url": "https://www.oreilly.com/library/view/docker-deep-dive/9781119552217/", "pages": 688, "year": 2023, "difficulty": "beginner" },
+    { "title": "The Docker Book", "author": "James Turnbull", "description": "Comprehensive guide to Docker covering installation, containers, images, Dockerfiles, networking, and the Docker ecosystem.", "url": "https://www.oreilly.com/library/view/the-docker-book/9780988820241/", "pages": 350, "year": 2014, "difficulty": "beginner" },
+    { "title": "Docker in Action", "author": "Jeff Nickoloff & Stephen Kuenzli", "description": "Practical Docker guide covering development workflows, CI/CD, orchestration, security, and production deployment.", "url": "https://www.oreilly.com/library/view/docker-in-action/9781617294761/", "pages": 384, "year": 2019, "difficulty": "intermediate" },
+    { "title": "Docker on Windows", "author": "Stefan Scherer & Mike G. Coleman", "description": "Comprehensive guide to running Docker on Windows including WSL2, Windows containers, and mixed-OS environments.", "url": "https://www.oreilly.com/library/view/docker-on-windows/9781805128984/", "pages": 400, "year": 2023, "difficulty": "intermediate" },
+    { "title": "Kubernetes in Action", "author": "Marko Lukša", "description": "While primarily about K8s, the first chapters provide excellent context on containers and Docker before diving into orchestration.", "url": "https://www.oreilly.com/library/view/kubernetes-in-action/9781617293726/", "pages": 600, "year": 2017, "difficulty": "intermediate" },
+    { "title": "Learn Docker - Fundamentals of Docker", "author": "Johan Classon", "description": "Hands-on guide covering Docker fundamentals through practical exercises and real-world scenarios.", "url": "https://www.packtpub.com/product/learn-docker-fundamentals-of-docker/9781789611232", "pages": 320, "year": 2020, "difficulty": "beginner" }
+  ],
+
+  "projects": [
+    { "title": "Multi-Container Web Application Stack", "description": "Web app with React frontend, Node API, PostgreSQL database, Redis cache, and Nginx reverse proxy — all in Docker Compose.", "difficulty": "Intermediate", "techStack": ["Docker Compose", "React", "Node.js", "PostgreSQL", "Redis", "Nginx"], "topics": ["Compose", "Multi-Container", "Networking"] },
+    { "title": "Production-Ready Dockerfile for Node.js App", "description": "Multi-stage Dockerfile with dependency caching, non-root user, health checks, and minimal Alpine base.", "difficulty": "Intermediate", "techStack": ["Docker", "Node.js", "Alpine"], "topics": ["Dockerfile", "Multi-Stage", "Best Practices"] },
+    { "title": "Docker Monitoring Stack", "description": "Prometheus + Grafana + cAdvisor + Node Exporter monitoring stack with dashboard for Docker host metrics.", "difficulty": "Intermediate", "techStack": ["Docker Compose", "Prometheus", "Grafana", "cAdvisor"], "topics": ["Monitoring", "Metrics", "Compose"] },
+    { "title": "Private Docker Registry with Web UI", "description": "Private Docker registry with authentication, TLS, image cleanup, and web interface using Harbor or Docker Registry + Portus.", "difficulty": "Advanced", "techStack": ["Docker Registry", "Harbor", "Nginx", "SSL/TLS"], "topics": ["Registry", "Security", "Storage"] },
+    { "title": "CI/CD with Docker and GitHub Actions", "description": "Automated build, test, security scan, and push pipeline for Docker images with GitHub Actions.", "difficulty": "Intermediate", "techStack": ["Docker", "GitHub Actions", "Trivy"], "topics": ["CI/CD", "Automation", "Security"] },
+    { "title": "Docker Swarm Cluster for Microservices", "description": "Docker Swarm cluster with multiple services, secrets, configs, rolling updates, and monitoring.", "difficulty": "Advanced", "techStack": ["Docker Swarm", "Traefik", "Prometheus"], "topics": ["Swarm", "Orchestration", "Production"] }
+  ],
+
+  "videoResources": [
+    { "title": "Docker Crash Course for Beginners", "platform": "YouTube", "url": "https://www.youtube.com/watch?v=3c-iBn73dDE", "duration": "1.5 hours", "difficulty": "beginner", "channel": "TechWorld with Nana" },
+    { "title": "Docker Full Course (freeCodeCamp)", "platform": "YouTube", "url": "https://www.youtube.com/watch?v=_dfLOzuIg2o", "duration": "6 hours", "difficulty": "beginner", "channel": "freeCodeCamp" },
+    { "title": "Docker Compose Tutorial", "platform": "YouTube", "url": "https://www.youtube.com/watch?v=HgvtvA7NB-E", "duration": "1 hour", "difficulty": "intermediate", "channel": "TechWorld with Nana" },
+    { "title": "Docker Networking Deep Dive", "platform": "YouTube", "url": "https://www.youtube.com/watch?v=6iQ8SY4iZN0", "duration": "1 hour", "difficulty": "advanced", "channel": "Docker" },
+    { "title": "Docker Swarm Tutorial", "platform": "YouTube", "url": "https://www.youtube.com/watch?v=KC4ZvMXRKxQ", "duration": "2 hours", "difficulty": "advanced", "channel": "TechWorld with Nana" },
+    { "title": "Docker Security Best Practices", "platform": "YouTube", "url": "https://www.youtube.com/watch?v=OmlS7waJmmo", "duration": "1 hour", "difficulty": "advanced", "channel": "DockerCon" },
+    { "title": "Development with Docker (VSCode Dev Containers)", "platform": "YouTube", "url": "https://www.youtube.com/watch?v=6j5q22nFPPc", "duration": "30 min", "difficulty": "intermediate", "channel": "Visual Studio Code" },
+    { "title": "Docker for AWS/Production Deployments", "platform": "YouTube", "url": "https://www.youtube.com/watch?v=2x75J4shnk0", "duration": "1 hour", "difficulty": "advanced", "channel": "Academind" }
+  ],
+
+  "bestPractices": [
+    "Use specific base image tags (not 'latest') for reproducible builds",
+    "Prefer official Docker images for reliability and security",
+    "Use multi-stage builds to minimize final image size",
+    "Put frequently-changing instructions at the end of Dockerfile for better caching",
+    "Use .dockerignore to exclude unnecessary files from build context",
+    "Run containers as non-root user — add USER directive in Dockerfile",
+    "Use HEALTHCHECK to enable Docker to detect unresponsive containers",
+    "Use read-only root filesystem (--read-only) for production containers",
+    "Drop all capabilities and add only needed ones",
+    "Use Docker Compose for defining multi-service applications",
+    "Use named volumes for persistent data, bind mounts for development code",
+    "Set resource limits (--memory, --cpus) on all production containers",
+    "Use centralized logging — configure logging driver to ship logs",
+    "Don't store secrets in images — use Docker secrets or build secrets",
+    "Add HEALTHCHECK to Dockerfiles for service health awareness",
+    "Use liveness and readiness probes (especially in orchestration)",
+    "Prefer COPY over ADD (ADD has automatic tar extraction and URL features — non-obvious)",
+    "Combine RUN apt-get update && apt-get install in one layer",
+    "Use labels (LABEL) for metadata and organization",
+    "Scan images for vulnerabilities before deployment"
+  ],
+
+  "careerOpportunities": [
+    { "role": "Docker/DevOps Engineer", "description": "Design and manage container infrastructure, CI/CD pipelines, and deployment automation.", "skills": ["Docker", "Linux", "CI/CD", "Kubernetes", "Cloud", "Scripting"] },
+    { "role": "Platform Engineer", "description": "Build internal developer platforms with Docker-based development environments and deployment workflows.", "skills": ["Docker", "Kubernetes", "Terraform", "CI/CD", "Go/Python"] },
+    { "role": "Site Reliability Engineer (SRE)", "description": "Ensure reliability and performance of containerized applications with monitoring, incident response, and automation.", "skills": ["Docker", "K8s", "Monitoring", "Linux", "Scripting", "Incident Management"] },
+    { "role": "Cloud Native Developer", "description": "Build and deploy containerized applications using Docker, microservices, and cloud-native patterns.", "skills": ["Docker", "Microservices", "K8s", "CI/CD", "Cloud Platform"] },
+    { "role": "DevOps Consultant", "description": "Advise organizations on Docker adoption, container strategy, CI/CD implementation, and DevOps transformation.", "skills": ["Docker", "K8s", "Architecture", "CI/CD", "Consulting"] }
+  ],
+
+  "roadmap": [
+    "Docker Fundamentals",
+    "Docker Images & Dockerfile",
+    "Docker Volumes & Data Persistence",
+    "Docker Networking",
+    "Docker Compose",
+    "Docker in Development Workflows",
+    "Docker Security & Best Practices",
+    "Docker in Production",
+    "Docker with CI/CD & Automation",
+    "Advanced Docker & Ecosystem"
+  ],
+
+  "related": ["kubernetes", "devops", "podman", "linux", "containers", "docker-compose"]
+}

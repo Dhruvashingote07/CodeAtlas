@@ -1,0 +1,626 @@
+{
+  "id": "java",
+  "slug": "java",
+  "name": "Java",
+  "icon": "☕",
+  "color": "#ED8B00",
+  "category": "Programming Languages",
+  "description": "A class-based, object-oriented programming language designed for platform independence via the JVM. Powers enterprise applications, Android development, big data infrastructure, and large-scale backend systems.",
+  "difficulty": "Intermediate",
+  "paradigms": ["Object-Oriented", "Class-Based", "Functional (Java 8+)", "Concurrent"],
+  "tags": ["java", "jvm", "enterprise", "android", "backend", "spring", "microservices"],
+  "overview": "Java is one of the most widely used programming languages in the world, known for its 'write once, run anywhere' capability through the Java Virtual Machine (JVM). Created by James Gosling at Sun Microsystems in 1995, Java has evolved through major versions with significant additions like lambdas (Java 8), modules (Java 9), pattern matching (Java 16+), and virtual threads (Java 21). It dominates enterprise backend development through the Spring ecosystem, powers Android apps, and forms the backbone of big data tools like Hadoop and Apache Spark. With strong typing, automatic memory management via garbage collection, and a vast mature ecosystem, Java remains a top choice for building reliable, scalable, high-performance applications.",
+
+  "learningPath": [
+    {
+      "stage": 1,
+      "title": "Java Fundamentals & Syntax",
+      "duration": "3-4 weeks",
+      "description": "Learn the core syntax, data types, control flow, and basic constructs of the Java language. Build a solid foundation in Java programming fundamentals.",
+      "topics": [
+        "History and features of Java",
+        "JDK, JRE, JVM architecture",
+        "Setting up development environment (JDK, IDE)",
+        "Writing your first Java program",
+        "Variables, data types, and type casting",
+        "Operators (arithmetic, logical, bitwise, relational)",
+        "Control flow: if-else, switch statements",
+        "Loops: for, while, do-while, enhanced for-each",
+        "Arrays (single and multidimensional)",
+        "String class and string manipulation",
+        "Command-line arguments and user input (Scanner)",
+        "Basic debugging and error messages"
+      ],
+      "projects": [
+        "Calculator with basic operations",
+        "Number guessing game",
+        "Temperature converter (Celsius/Fahrenheit)",
+        "Simple grading system"
+      ],
+      "resources": [
+        "https://docs.oracle.com/en/java/javase/",
+        "https://www.javatpoint.com/java-tutorial",
+        "https://www.w3schools.com/java/",
+        "https://www.codecademy.com/learn/learn-java"
+      ]
+    },
+    {
+      "stage": 2,
+      "title": "Object-Oriented Programming in Java",
+      "duration": "4-5 weeks",
+      "description": "Master Java's object-oriented programming paradigm including classes, objects, inheritance, polymorphism, encapsulation, and abstraction.",
+      "topics": [
+        "Classes and objects",
+        "Constructors (default, parameterized, copy)",
+        "this and super keywords",
+        "Instance vs static variables and methods",
+        "Access modifiers (public, private, protected, default)",
+        "Encapsulation and getters/setters",
+        "Inheritance (single, multilevel, hierarchical)",
+        "Method overriding and dynamic method dispatch",
+        "Polymorphism (compile-time and runtime)",
+        "Abstract classes and abstract methods",
+        "Interfaces and multiple inheritance of behavior",
+        "final keyword (variables, methods, classes)",
+        "Object class methods (toString, equals, hashCode)",
+        "Packages and import statements",
+        "Nested and inner classes"
+      ],
+      "projects": [
+        "Library management system",
+        "Employee payroll system",
+        "Bank account management with OOP design",
+        "Student record management"
+      ],
+      "resources": [
+        "https://docs.oracle.com/javase/tutorial/java/concepts/",
+        "https://www.baeldung.com/java-oop",
+        "https://www.geeksforgeeks.org/object-oriented-programming-oops-concept-in-java/"
+      ]
+    },
+    {
+      "stage": 3,
+      "title": "Exception Handling & File I/O",
+      "duration": "2-3 weeks",
+      "description": "Learn robust error handling with exceptions, file input/output operations, and serialization in Java.",
+      "topics": [
+        "Exception hierarchy (Throwable, Error, Exception, RuntimeException)",
+        "Checked vs unchecked exceptions",
+        "try-catch-finally blocks",
+        "try-with-resources (AutoCloseable)",
+        "throw and throws keywords",
+        "Creating custom exceptions",
+        "File class and file system operations",
+        "Byte streams (InputStream, OutputStream)",
+        "Character streams (Reader, Writer)",
+        "Buffered streams for performance",
+        "Object serialization and deserialization",
+        "Reading/writing text files",
+        "Properties file handling",
+        "NIO.2 API (Files, Paths, Path)"
+      ],
+      "projects": [
+        "File encryption/decryption tool",
+        "Log file analyzer and parser",
+        "Contact book with file persistence",
+        "Configuration file reader application"
+      ],
+      "resources": [
+        "https://docs.oracle.com/javase/tutorial/essential/exceptions/",
+        "https://www.baeldung.com/java-exceptions",
+        "https://docs.oracle.com/javase/tutorial/essential/io/"
+      ]
+    },
+    {
+      "stage": 4,
+      "title": "Collections Framework & Generics",
+      "duration": "3-4 weeks",
+      "description": "Deep dive into Java's Collections Framework including lists, sets, maps, queues, and generic programming for type-safe code.",
+      "topics": [
+        "Collection Framework hierarchy",
+        "List interface (ArrayList, LinkedList, Vector, Stack)",
+        "Set interface (HashSet, LinkedHashSet, TreeSet)",
+        "Queue interface (PriorityQueue, LinkedList, Deque, ArrayDeque)",
+        "Map interface (HashMap, LinkedHashMap, TreeMap, Hashtable)",
+        "Comparable vs Comparator interfaces",
+        "Collections utility class (sort, binarySearch, reverse, shuffle)",
+        "Generics basics and type parameters",
+        "Generic methods and bounded type parameters",
+        "Wildcards (? extends, ? super, ?)",
+        "Type erasure in generics",
+        "Iterator and ListIterator",
+        "Enhanced for-each and forEach method",
+        "Stream API overview (intermediate and terminal operations)",
+        "Optional class and null-safe programming"
+      ],
+      "projects": [
+        "In-memory key-value store with generics",
+        "Student database with sorting and filtering",
+        "Task scheduler using PriorityQueue",
+        "Phone directory application using HashMap"
+      ],
+      "resources": [
+        "https://docs.oracle.com/javase/tutorial/collections/",
+        "https://www.baeldung.com/java-collections",
+        "https://www.geeksforgeeks.org/java-collection-framework/"
+      ]
+    },
+    {
+      "stage": 5,
+      "title": "Multithreading & Concurrency",
+      "duration": "3-4 weeks",
+      "description": "Master concurrent programming in Java including thread creation, synchronization, locks, executors, and the new virtual threads (Java 21+).",
+      "topics": [
+        "Thread class and Runnable interface",
+        "Thread lifecycle (NEW, RUNNABLE, BLOCKED, WAITING, TIMED_WAITING, TERMINATED)",
+        "Thread priorities and daemon threads",
+        "synchronized keyword and intrinsic locks",
+        "Inter-thread communication (wait, notify, notifyAll)",
+        "Deadlock, livelock, and starvation prevention",
+        "java.util.concurrent package overview",
+        "ExecutorService and thread pools",
+        "Callable, Future, and FutureTask",
+        "Locks (ReentrantLock, ReadWriteLock, StampedLock)",
+        "Atomic variables (AtomicInteger, AtomicReference)",
+        "Concurrent collections (ConcurrentHashMap, CopyOnWriteArrayList, BlockingQueue)",
+        "CountDownLatch, CyclicBarrier, Semaphore, Exchanger",
+        "Phaser and CompletableFuture",
+        "Fork/Join framework and work-stealing",
+        "Virtual threads (Project Loom, Java 21+)"
+      ],
+      "projects": [
+        "Multithreaded web crawler",
+        "Producer-consumer application",
+        "Parallel file search utility",
+        "Real-time stock price monitoring system"
+      ],
+      "resources": [
+        "https://docs.oracle.com/javase/tutorial/essential/concurrency/",
+        "https://www.baeldung.com/java-concurrency",
+        "https://www.geeksforgeeks.org/multithreading-in-java/"
+      ]
+    },
+    {
+      "stage": 6,
+      "title": "Java 8+ Features & Functional Programming",
+      "duration": "3-4 weeks",
+      "description": "Learn modern Java features including lambdas, streams, functional interfaces, optionals, and date/time API that transformed Java programming.",
+      "topics": [
+        "Lambda expressions syntax and usage",
+        "Functional interfaces (@FunctionalInterface)",
+        "Built-in functional interfaces (Predicate, Function, Consumer, Supplier)",
+        "Method references and constructor references",
+        "Stream API in depth (map, filter, reduce, collect, flatMap)",
+        "Stream collectors and groupingBy, partitioningBy",
+        "Parallel streams and performance considerations",
+        "Optional class (creation, transformation, retrieval)",
+        "New Date and Time API (LocalDate, LocalTime, LocalDateTime, ZonedDateTime)",
+        "DateTimeFormatter and temporal adjusters",
+        "Period and Duration classes",
+        "Default and static methods in interfaces",
+        "CompletableFuture and asynchronous programming",
+        "StringJoiner and String.join",
+        "Nashorn JavaScript engine (Java 8-14)"
+      ],
+      "projects": [
+        "Data analysis pipeline using Stream API",
+        "Financial transaction processing system",
+        "Event scheduling application with Date/Time API",
+        "Asynchronous file downloader with CompletableFuture"
+      ],
+      "resources": [
+        "https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html",
+        "https://www.baeldung.com/java-8-streams",
+        "https://www.geeksforgeeks.org/java-8-features/"
+      ]
+    },
+    {
+      "stage": 7,
+      "title": "JDBC & Database Programming",
+      "duration": "2-3 weeks",
+      "description": "Learn database connectivity in Java using JDBC, connection pooling, ORM concepts, and working with SQL databases.",
+      "topics": [
+        "JDBC architecture and drivers",
+        "Establishing database connections",
+        "Statement, PreparedStatement, CallableStatement",
+        "Executing SQL queries and updates",
+        "ResultSet and ResultSetMetaData",
+        "Batch processing and transactions",
+        "Connection pooling (HikariCP, Apache DBCP)",
+        "DAO (Data Access Object) pattern",
+        "ORM concepts and JPA overview",
+        "Hibernate basics (entities, mappings, sessions)",
+        "Spring JDBC Template",
+        "Database migration tools (Flyway, Liquibase)",
+        "Working with MySQL, PostgreSQL, and H2 databases"
+      ],
+      "projects": [
+        "Blog platform with database persistence",
+        "E-commerce inventory management system",
+        "Hotel reservation system with JDBC",
+        "User authentication system with database"
+      ],
+      "resources": [
+        "https://docs.oracle.com/javase/tutorial/jdbc/",
+        "https://www.baeldung.com/java-jdbc",
+        "https://www.geeksforgeeks.org/connecting-java-to-mysql-database/"
+      ]
+    },
+    {
+      "stage": 8,
+      "title": "Spring Boot & Microservices",
+      "duration": "6-8 weeks",
+      "description": "Master the Spring ecosystem including Spring Boot, Spring MVC, Spring Data JPA, Spring Security, and building microservices architectures.",
+      "topics": [
+        "Spring Framework fundamentals (IoC, DI, AOP)",
+        "Spring Boot auto-configuration and starters",
+        "REST API development with Spring MVC",
+        "Request handling (@Controller, @RestController, @RequestMapping)",
+        "Dependency injection (@Autowired, @Component, @Service, @Repository)",
+        "Spring Data JPA and Hibernate integration",
+        "Entity relationships (OneToOne, OneToMany, ManyToMany)",
+        "Spring Security (authentication, authorization, JWT, OAuth2)",
+        "Spring Boot Actuator and metrics",
+        "Spring Cloud overview (Eureka, Gateway, Config Server)",
+        "Microservices architecture principles",
+        "Inter-service communication (REST, gRPC, message queues)",
+        "API Gateway patterns (Spring Cloud Gateway, Zuul)",
+        "Service discovery and load balancing (Eureka, Ribbon)",
+        "Circuit breaker pattern (Resilience4j, Hystrix)",
+        "Distributed tracing (Spring Cloud Sleuth, Zipkin)",
+        "Event-driven architecture with Spring Cloud Stream",
+        "Containerizing Spring Boot apps with Docker",
+        "Testing Spring Boot applications (JUnit, Mockito, Testcontainers)"
+      ],
+      "projects": [
+        "RESTful blog API with Spring Boot",
+        "E-commerce microservices application",
+        "Task management system with Spring Security",
+        "Event-driven order processing system"
+      ],
+      "resources": [
+        "https://spring.io/projects/spring-boot",
+        "https://www.baeldung.com/spring-boot",
+        "https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/",
+        "https://spring.io/microservices"
+      ]
+    },
+    {
+      "stage": 9,
+      "title": "Advanced Java & JVM Internals",
+      "duration": "4-5 weeks",
+      "description": "Deep dive into JVM internals, performance tuning, memory management, profiling, and advanced Java features for building high-performance applications.",
+      "topics": [
+        "JVM architecture (class loader, runtime data areas, execution engine)",
+        "Class loading mechanism (bootstrap, extension, application class loaders)",
+        "Bytecode analysis and JIT compilation",
+        "Garbage collection algorithms (Serial, Parallel, CMS, G1, ZGC, Shenandoah)",
+        "GC tuning and JVM flags",
+        "Memory profiling and heap dump analysis (JProfiler, YourKit, VisualVM)",
+        "Thread dump analysis and deadlock detection",
+        "Java Module System (JPMS, Java 9+)",
+        "Reflection API and dynamic proxies",
+        "Annotations and annotation processors",
+        "Performance benchmarking (JMH - Java Microbenchmark Harness)",
+        "JVM performance monitoring (jconsole, jmc, jstat, jmap)",
+        "Profiling CPU and memory hotspots",
+        "Java Native Interface (JNI) and Foreign Function & Memory API (Java 22+)",
+        "Project Panama and vector API",
+        "Valhalla: value types and primitive classes",
+        "Java Records (Java 16) — data carrier classes",
+        "Sealed classes and interfaces (Java 17)",
+        "Pattern matching for instanceof (Java 16+)",
+        "Pattern matching for switch (Java 17-21, preview)",
+        "Record patterns (Java 19-21, preview)",
+        "Text blocks (Java 13-15)",
+        "Switch expressions (Java 14)",
+        "Helpful NullPointerExceptions (Java 14+)",
+        "String templates (Java 21 preview)",
+        "Structured concurrency (Java 19-21, preview)",
+        "Scoped values (Java 20-21, preview)"
+      ],
+      "projects": [
+        "Custom class loader implementation",
+        "Simple JVM profiler tool",
+        "Annotation-based dependency injection container",
+        "Performance-optimized data processing pipeline"
+      ],
+      "resources": [
+        "https://docs.oracle.com/javase/specs/jvms/se21/html/",
+        "https://www.baeldung.com/jvm-garbage-collectors",
+        "https://www.geeksforgeeks.org/jvm-works-jvm-architecture/",
+        "https://shipilev.net/"
+      ]
+    },
+    {
+      "stage": 10,
+      "title": "Enterprise Architecture & Best Practices",
+      "duration": "4-6 weeks",
+      "description": "Learn enterprise design patterns, software architecture, testing strategies, CI/CD, and production-ready Java application development.",
+      "topics": [
+        "Design patterns in Java (Singleton, Factory, Builder, Observer, Strategy, Decorator)",
+        "Enterprise Integration Patterns",
+        "Clean architecture and hexagonal architecture",
+        "Domain-Driven Design (DDD) in Java",
+        "CQRS and Event Sourcing patterns",
+        "Testing pyramid (unit, integration, system, E2E)",
+        "JUnit 5 (assertions, assumptions, parameterized tests, extensions)",
+        "Mockito (mocking, stubbing, verification, argument captors)",
+        "Testcontainers for integration testing",
+        "ArchUnit for architecture testing",
+        "Logging (SLF4J, Logback, Log4j2)",
+        "Monitoring and observability (Micrometer, Prometheus, Grafana)",
+        "CI/CD pipeline (Jenkins, GitHub Actions, GitLab CI)",
+        "SonarQube for code quality analysis",
+        "Dependency management (Maven, Gradle)",
+        "Versioning strategies (Semantic Versioning)",
+        "API versioning and documentation (OpenAPI/Swagger, SpringDoc)",
+        "Security best practices (OWASP Top 10, secure coding)",
+        "Reactive programming with Project Reactor and WebFlux",
+        "GraphQL with Spring for GraphQL (Query, Mutation, Subscription)",
+        "gRPC with Java (protobuf, server/client, streaming)",
+        "Cloud-native Java with Spring Cloud and Kubernetes",
+        "Serverless Java with AWS Lambda / Azure Functions / Google Cloud Functions",
+        "Java and container orchestration (Kubernetes, Helm charts)",
+        "Internationalization (i18n) with ResourceBundle and locale handling",
+        "Java Cryptography Architecture (JCA) and extensions",
+        "JMX for application monitoring and management",
+        "Java Flight Recorder (JFR) for production diagnostics"
+      ],
+      "projects": [
+        "Complete e-commerce platform with microservices",
+        "Banking system with event sourcing",
+        "SaaS multi-tenant application",
+        "Real-time analytics dashboard",
+        "Reactive REST API with Spring WebFlux and R2DBC",
+        "GraphQL API for a library management system",
+        "gRPC-based inter-service communication system",
+        "Cloud-native Spring Boot app deployed on Kubernetes"
+      ],
+      "resources": [
+        "https://www.baeldung.com/design-patterns-series",
+        "https://martinfowler.com/tags/Java.html",
+        "https://junit.org/junit5/docs/current/user-guide/",
+        "https://site.mockito.org/",
+        "https://projectreactor.io/docs",
+        "https://docs.spring.io/spring-graphql/docs/current/reference/html/",
+        "https://grpc.io/docs/languages/java/",
+        "https://docs.oracle.com/en/java/javase/14/helpful-nullpointerexception.html"
+      ]
+    }
+  ],
+
+  "resources": [
+    { "name": "Official Java Documentation", "url": "https://docs.oracle.com/en/java/javase/", "type": "Official", "difficulty": "all", "free": true, "official": true },
+    { "name": "Java Language Specification", "url": "https://docs.oracle.com/javase/specs/", "type": "Official", "difficulty": "all", "free": true, "official": true },
+    { "name": "Baeldung", "url": "https://www.baeldung.com", "type": "Tutorial", "difficulty": "all", "free": true, "official": false },
+    { "name": "JavaTPoint", "url": "https://www.javatpoint.com/java-tutorial", "type": "Tutorial", "difficulty": "beginner", "free": true, "official": false },
+    { "name": "GeeksforGeeks Java", "url": "https://www.geeksforgeeks.org/java/", "type": "Tutorial", "difficulty": "all", "free": true, "official": false },
+    { "name": "W3Schools Java Tutorial", "url": "https://www.w3schools.com/java/", "type": "Tutorial", "difficulty": "beginner", "free": true, "official": false },
+    { "name": "Codecademy Learn Java", "url": "https://www.codecademy.com/learn/learn-java", "type": "Course", "difficulty": "beginner", "free": false, "official": false },
+    { "name": "Coursera Java Programming (Duke)", "url": "https://www.coursera.org/specializations/java-programming", "type": "Course", "difficulty": "beginner", "free": false, "official": false },
+    { "name": "Spring Official Documentation", "url": "https://spring.io/docs", "type": "Documentation", "difficulty": "intermediate", "free": true, "official": true },
+    { "name": "Spring Boot Reference Guide", "url": "https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/", "type": "Documentation", "difficulty": "intermediate", "free": true, "official": true },
+    { "name": "Java Concurrency in Practice (Online)", "url": "https://jcip.net/", "type": "Reference", "difficulty": "advanced", "free": true, "official": false },
+    { "name": "Maven Official Documentation", "url": "https://maven.apache.org/guides/", "type": "Documentation", "difficulty": "intermediate", "free": true, "official": true },
+    { "name": "Gradle User Manual", "url": "https://docs.gradle.org/current/userguide/userguide.html", "type": "Documentation", "difficulty": "intermediate", "free": true, "official": true },
+    { "name": "Hibernate ORM Documentation", "url": "https://hibernate.org/orm/documentation/", "type": "Documentation", "difficulty": "intermediate", "free": true, "official": true },
+    { "name": "Project Loom (Virtual Threads)", "url": "https://openjdk.org/projects/loom/", "type": "Reference", "difficulty": "advanced", "free": true, "official": true },
+    { "name": "Java Code Conventions", "url": "https://www.oracle.com/java/technologies/javase/codeconventions-contents.html", "type": "Reference", "difficulty": "beginner", "free": true, "official": true },
+    { "name": "JetBrains IntelliJ IDEA Guide", "url": "https://www.jetbrains.com/idea/guide/", "type": "Tutorial", "difficulty": "all", "free": true, "official": false },
+    { "name": "Java Design Patterns (iluwatar)", "url": "https://github.com/iluwatar/java-design-patterns", "type": "Reference", "difficulty": "intermediate", "free": true, "official": false },
+    { "name": "Spring Initializr", "url": "https://start.spring.io/", "type": "Tool", "difficulty": "intermediate", "free": true, "official": true },
+    { "name": "Dev.java (Oracle Learning)", "url": "https://dev.java/", "type": "Tutorial", "difficulty": "all", "free": true, "official": true },
+    { "name": "Java Certification (Oracle)", "url": "https://education.oracle.com/java-se-8-programmer-i-1z0-808/pexam_1Z0-808", "type": "Course", "difficulty": "intermediate", "free": false, "official": true },
+    { "name": "OpenJDK", "url": "https://openjdk.org/", "type": "Official", "difficulty": "all", "free": true, "official": true },
+    { "name": "Java Revisited Blog", "url": "https://javarevisited.blogspot.com/", "type": "Article", "difficulty": "all", "free": true, "official": false },
+    { "name": "InfoQ Java Articles", "url": "https://www.infoq.com/java/", "type": "Article", "difficulty": "advanced", "free": true, "official": false },
+    { "name": "Java Specialists Newsletter", "url": "https://www.javaspecialists.eu/", "type": "Article", "difficulty": "advanced", "free": true, "official": false },
+    { "name": "DZone Java Zone", "url": "https://dzone.com/java-jdk-development", "type": "Article", "difficulty": "intermediate", "free": true, "official": false },
+    { "name": "Jakarta EE Documentation", "url": "https://jakarta.ee/documentation/", "type": "Documentation", "difficulty": "advanced", "free": true, "official": true },
+    { "name": "JUnit 5 User Guide", "url": "https://junit.org/junit5/docs/current/user-guide/", "type": "Documentation", "difficulty": "intermediate", "free": true, "official": true },
+    { "name": "Mockito Documentation", "url": "https://site.mockito.org/", "type": "Documentation", "difficulty": "intermediate", "free": true, "official": true },
+    { "name": "Testcontainers Documentation", "url": "https://testcontainers.com/guides/", "type": "Documentation", "difficulty": "intermediate", "free": true, "official": true },
+    { "name": "Reactive Programming with Project Reactor", "url": "https://projectreactor.io/docs", "type": "Documentation", "difficulty": "advanced", "free": true, "official": true },
+    { "name": "Spring GraphQL Documentation", "url": "https://docs.spring.io/spring-graphql/reference/", "type": "Documentation", "difficulty": "advanced", "free": true, "official": true },
+    { "name": "gRPC Java Documentation", "url": "https://grpc.io/docs/languages/java/basics/", "type": "Documentation", "difficulty": "advanced", "free": true, "official": true },
+    { "name": "Understanding Java Records", "url": "https://www.baeldung.com/java-record-keyword", "type": "Article", "difficulty": "intermediate", "free": true, "official": false },
+    { "name": "Java Sealed Classes Guide", "url": "https://www.baeldung.com/java-sealed-classes-interfaces", "type": "Article", "difficulty": "intermediate", "free": true, "official": false },
+    { "name": "Pattern Matching in Java", "url": "https://www.baeldung.com/java-pattern-matching-instanceof", "type": "Article", "difficulty": "intermediate", "free": true, "official": false },
+    { "name": "Virtual Threads Guide", "url": "https://www.baeldung.com/java-virtual-threads", "type": "Article", "difficulty": "advanced", "free": true, "official": false },
+    { "name": "Java Flight Recorder Guide", "url": "https://www.baeldung.com/java-flight-recorder", "type": "Article", "difficulty": "advanced", "free": true, "official": false },
+    { "name": "AssertJ Documentation", "url": "https://assertj.github.io/doc/", "type": "Documentation", "difficulty": "intermediate", "free": true, "official": true },
+    { "name": "Spring Cloud Kubernetes", "url": "https://spring.io/projects/spring-cloud-kubernetes", "type": "Documentation", "difficulty": "advanced", "free": true, "official": true },
+    { "name": "Micrometer Tracing", "url": "https://micrometer.io/docs/tracing", "type": "Documentation", "difficulty": "advanced", "free": true, "official": true }
+  ],
+
+  "cheatSheets": [
+    { "name": "Java Syntax Cheat Sheet", "url": "https://quickref.me/java", "source": "QuickRef.me", "topics": ["syntax", "basics", "data-types"], "format": "Web" },
+    { "name": "Java Collections Cheat Sheet", "url": "https://www.baeldung.com/java-collections-cheat-sheet", "source": "Baeldung", "topics": ["collections", "lists", "maps", "sets"], "format": "Web" },
+    { "name": "Java Stream API Cheat Sheet", "url": "https://www.baeldung.com/java-streams-cheat-sheet", "source": "Baeldung", "topics": ["streams", "functional-programming"], "format": "Web" },
+    { "name": "Java 8 Cheat Sheet", "url": "https://www.java-success.com/java-8-cheat-sheet/", "source": "Java Success", "topics": ["java-8", "lambdas", "streams"], "format": "Web" },
+    { "name": "Spring Boot Annotations Cheat Sheet", "url": "https://www.baeldung.com/spring-boot-annotations", "source": "Baeldung", "topics": ["spring-boot", "annotations"], "format": "Web" },
+    { "name": "Java Design Patterns Cheat Sheet", "url": "https://www.baeldung.com/java-design-patterns-cheat-sheet", "source": "Baeldung", "topics": ["design-patterns"], "format": "Web" }
+  ],
+
+  "interviewQuestions": [
+    { "question": "What is the difference between JDK, JRE, and JVM?", "answer": "JDK (Java Development Kit) includes JRE + development tools for compiling and debugging Java programs. JRE (Java Runtime Environment) includes JVM + core libraries for running Java applications. JVM (Java Virtual Machine) executes Java bytecode, providing platform independence.", "difficulty": "Easy", "topic": "Core Java" },
+    { "question": "What is the difference between == and equals() in Java?", "answer": "== compares reference equality (memory addresses) for objects, while equals() compares value equality. For primitive types, == compares values. The default equals() in Object uses ==, but classes like String, Integer override it to compare content.", "difficulty": "Easy", "topic": "Core Java" },
+    { "question": "Explain method overloading vs method overriding.", "answer": "Overloading is compile-time polymorphism where multiple methods share the same name but differ in parameters (number, type, or order) within the same class. Overriding is runtime polymorphism where a subclass provides a specific implementation of a method already defined in its parent class, with same signature.", "difficulty": "Easy", "topic": "OOP" },
+    { "question": "What is the difference between abstract class and interface?", "answer": "Abstract classes can have constructors, instance variables, and both abstract and concrete methods; support single inheritance. Interfaces (pre-Java 8) had only abstract methods and constants; support multiple inheritance. Java 8+ interfaces can have default and static methods. Java 9+ allows private methods in interfaces. Abstract classes represent an 'is-a' relationship; interfaces represent a 'can-do' capability.", "difficulty": "Easy", "topic": "OOP" },
+    { "question": "What is the purpose of the final keyword in Java?", "answer": "final can be applied to: variables (makes them constants, cannot be reassigned), methods (prevents overriding in subclasses), and classes (prevents inheritance). Blank final variables must be initialized in the constructor.", "difficulty": "Easy", "topic": "Core Java" },
+    { "question": "How does garbage collection work in Java?", "answer": "Java GC automatically reclaims memory from objects that are no longer reachable. The JVM periodically runs the GC, which identifies live objects (via root references) and removes unreachable ones. Common algorithms: Mark-Sweep, Mark-Compact, Copying. Modern JVMs use generational GC (Young, Old, Metaspace generations) with collectors like G1, ZGC, and Shenandoah.", "difficulty": "Medium", "topic": "JVM" },
+    { "question": "What is the difference between HashMap and ConcurrentHashMap?", "answer": "HashMap is not thread-safe; allows null keys/values; throws ConcurrentModificationException under concurrent modification. ConcurrentHashMap is thread-safe; does not allow null keys/values; uses lock striping (Java 7) or synchronized + CAS (Java 8+) for high concurrency; provides better performance under concurrent access.", "difficulty": "Medium", "topic": "Collections" },
+    { "question": "Explain the Java memory model (JMM).", "answer": "JMM defines how threads interact through memory and specifies rules for visibility, ordering, and atomicity. It ensures that changes made by one thread become visible to others. Key concepts: happens-before relationship, volatile variables, synchronized blocks, and atomic operations. Without proper synchronization, threads may see stale values due to CPU caches and instruction reordering.", "difficulty": "Medium", "topic": "Concurrency" },
+    { "question": "What is the difference between synchronized and volatile in Java?", "answer": "volatile ensures visibility of changes across threads (reads/writes happen directly to main memory) but does NOT provide atomicity or mutual exclusion. synchronized provides both visibility and atomicity by acquiring a monitor lock; it ensures mutual exclusion and establishes happens-before relationships. volatile is cheaper but limited; synchronized is more powerful but has higher overhead.", "difficulty": "Medium", "topic": "Concurrency" },
+    { "question": "How does Spring Dependency Injection work?", "answer": "Spring DI inverts the control of object creation and wiring. The IoC Container (ApplicationContext) manages bean lifecycles. Dependencies are injected via constructor, setter, or field injection using annotations (@Autowired, @Inject). Spring resolves dependencies by type, then by name/qualifier. This promotes loose coupling, testability, and maintainability.", "difficulty": "Medium", "topic": "Spring" },
+    { "question": "What is the difference between @Component, @Service, @Repository, and @Controller?", "answer": "All are Spring stereotype annotations for marking beans. @Component is the generic stereotype. @Service marks service layer beans (business logic). @Repository marks DAO/repository beans; adds persistence exception translation. @Controller marks web layer beans in Spring MVC; supports request mapping. They are functionally identical but communicate intent and enable specific behavior (like @Repository's exception translation).", "difficulty": "Medium", "topic": "Spring" },
+    { "question": "Explain the Stream API and its intermediate/terminal operations.", "answer": "Stream API in Java 8 enables functional-style operations on collections. Intermediate operations (map, filter, sorted, distinct, limit, skip, flatMap) return a new stream and are lazy. Terminal operations (collect, forEach, reduce, count, anyMatch, allMatch, findFirst, findAny) produce a result or side-effect and close the stream. Streams cannot be reused after a terminal operation.", "difficulty": "Medium", "topic": "Java 8+" },
+    { "question": "What are the different types of garbage collectors in Java?", "answer": "Major GC types: Serial GC (single-threaded, for small apps), Parallel/Throughput GC (multi-threaded, for batch jobs), CMS (low-latency, deprecated in Java 14), G1 (default since Java 9, balanced throughput/latency for large heaps), ZGC (ultra-low latency, scalable, Java 15+), Shenandoah (low-pause, concurrent compaction, Java 12+). ZGC and Shenandoah aim for sub-millisecond pause times.", "difficulty": "Hard", "topic": "JVM" },
+    { "question": "How does Spring Boot auto-configuration work?", "answer": "Spring Boot auto-configuration uses @EnableAutoConfiguration combined with spring.factories/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports files that list configuration classes. @Conditional annotations (like @ConditionalOnClass, @ConditionalOnMissingBean, @ConditionalOnProperty) control whether configurations activate based on classpath contents, property settings, bean presence, etc.", "difficulty": "Hard", "topic": "Spring" },
+    { "question": "What is the difference between @Transactional in Spring and manual transaction management?", "answer": "@Transactional is declarative transaction management; Spring wraps the method with AOP, handling begin, commit, and rollback automatically based on RuntimeException. Manual management uses PlatformTransactionManager API (beginTransaction, commit, rollback). Declarative is cleaner but offers less granular control. @Transactional supports propagation, isolation, timeout, readOnly, and rollbackFor attributes.", "difficulty": "Hard", "topic": "Spring" },
+    { "question": "Explain Project Loom and Virtual Threads.", "answer": "Project Loom introduces virtual threads (Java 21+) — lightweight threads managed by the JVM rather than the OS. Virtual threads are cheap enough to create millions per application, enabling simpler thread-per-request models without the overhead of OS threads. They block on I/O by yielding their carrier thread, dramatically improving resource utilization under high concurrency.", "difficulty": "Hard", "topic": "Concurrency" },
+    { "question": "How does the Java Module System (JPMS) work?", "answer": "JPMS (Java 9+) introduces modules — named groups of related packages with explicit dependencies and exported packages. module-info.java declares module name, requires (dependencies), exports (accessible packages), opens (for reflection), provides (service implementations), and uses (service dependencies). JPMS enforces encapsulation at the JVM level, eliminates classpath issues, and enables reliable configuration.", "difficulty": "Hard", "topic": "Advanced Java" },
+    { "question": "What is the Fork/Join framework in Java?", "answer": "Fork/Join (Java 7+) implements the work-stealing algorithm for parallel processing. It splits (forks) a task into subtasks recursively, processes them in parallel via a pool of worker threads, then joins results. The ForkJoinPool uses a work-stealing approach where idle threads steal tasks from busy threads' queues. It's ideal for divide-and-conquer algorithms like parallel sorting, search, and matrix operations.", "difficulty": "Hard", "topic": "Concurrency" },
+    { "question": "What are Java Records and when should you use them?", "answer": "Records (Java 16) are transparent, immutable data carrier classes. They automatically generate constructor, equals(), hashCode(), toString(), and accessor methods. Use records for DTOs, value objects, and any class whose main purpose is carrying immutable data. Records cannot extend other classes, cannot have instance fields besides the components, and are implicitly final.", "difficulty": "Medium", "topic": "Modern Java" },
+    { "question": "Explain sealed classes in Java.", "answer": "Sealed classes (Java 17) restrict which classes or interfaces may extend/implement them. Declared with the sealed keyword followed by permits listing permitted subclasses. Sealed classes enable exhaustive pattern matching by limiting the inheritance hierarchy. Permitted subclasses must be final, sealed, or non-sealed. This provides more control over the type hierarchy than the traditional all-or-nothing approach.", "difficulty": "Medium", "topic": "Modern Java" },
+    { "question": "What is pattern matching for instanceof?", "answer": "Pattern matching for instanceof (Java 16+) combines type checking and variable binding into a single expression. Instead of: if (obj instanceof String) { String s = (String) obj; }, you write: if (obj instanceof String s) { /* use s directly */ }. The pattern variable s is only in scope where the instanceof check succeeds, eliminating boilerplate and potential casting errors.", "difficulty": "Medium", "topic": "Modern Java" },
+    { "question": "How does reactive programming differ from imperative programming in Java?", "answer": "Reactive programming is declarative and data-flow driven vs imperative's step-by-step execution. Reactive uses: Reactive Streams specification (Publisher, Subscriber, Subscription, Processor), backpressure for flow control, Project Reactor (Mono for 0-1 elements, Flux for 0-N elements), operators for transformation (map, flatMap, filter), and non-blocking I/O. WebFlux provides reactive web capabilities on top of Reactor compared to traditional blocking Servlet API.", "difficulty": "Hard", "topic": "Reactive" },
+    { "question": "What are virtual threads and how do they differ from platform threads?", "answer": "Virtual threads (Java 21, Project Loom) are lightweight JVM-managed threads that multiplex onto platform (OS) threads. Unlike platform threads which consume ~1MB of stack and are limited to thousands, virtual threads cost ~few KB and can be created in millions. They follow the thread-per-request model without the overhead. When a virtual thread blocks on I/O, it yields its carrier thread to run other virtual threads, dramatically improving throughput for I/O-bound applications.", "difficulty": "Hard", "topic": "Concurrency" },
+    { "question": "Explain the difference between checked and unchecked exceptions with examples.", "answer": "Checked exceptions (subclasses of Exception but not RuntimeException) must be declared in throws clause or caught. Examples: IOException, SQLException, ClassNotFoundException. They represent recoverable conditions the caller should handle. Unchecked exceptions (subclasses of RuntimeException and Error) don't require handling. Examples: NullPointerException, IllegalArgumentException, ArrayIndexOutOfBoundsException. They represent programming errors or unrecoverable conditions. Modern Java frameworks prefer unchecked exceptions to avoid cluttering code.", "difficulty": "Easy", "topic": "Core Java" },
+    { "question": "What is the difference between fail-fast and fail-safe iterators?", "answer": "Fail-fast iterators (e.g., ArrayList.iterator()) throw ConcurrentModificationException if the collection is structurally modified during iteration (except via iterator's own remove method). They work by tracking a modCount field. Fail-safe or weakly consistent iterators (e.g., ConcurrentHashMap.keySet().iterator()) allow concurrent modification by iterating over a snapshot or a copy of the data, thus never throwing ConcurrentModificationException but may not reflect latest modifications.", "difficulty": "Medium", "topic": "Collections" },
+    { "question": "What are the new switch expressions in Java 14+?", "answer": "Switch expressions (Java 14 standard) extend switch statements with: arrow syntax (->) instead of colon-break, no fall-through with arrows, ability to return values (use with assignment), multiple case labels (case 1, 2, 3 ->), and exhaustive checking (must cover all cases, use default if not exhaustive). Switch expressions are more concise and less error-prone than traditional switch statements.", "difficulty": "Medium", "topic": "Modern Java" },
+    { "question": "Describe the different states in a thread lifecycle.", "answer": "Thread states: NEW (created but not started), RUNNABLE (executing or ready to execute), BLOCKED (waiting for a monitor lock), WAITING (waiting indefinitely for another thread — Object.wait(), Thread.join() without timeout), TIMED_WAITING (waiting with timeout — Thread.sleep(), Object.wait(timeout)), TERMINATED (execution finished). A thread can be in only one state at a time, and transitions are controlled by the JVM.", "difficulty": "Easy", "topic": "Concurrency" },
+    { "question": "Explain the concept of method references in Java 8.", "answer": "Method references are shorthand for lambda expressions calling an existing method. Four types: static method reference (Class::staticMethod), instance method of a particular object (instance::method), instance method of any object of a particular type (Class::instanceMethod), and constructor reference (Class::new). Example: list.forEach(System.out::println) is equivalent to list.forEach(s -> System.out.println(s)). Method references are more concise and readable.", "difficulty": "Medium", "topic": "Java 8+" }
+  ],
+
+  "books": [
+    { "title": "Head First Java", "author": "Kathy Sierra & Bert Bates", "description": "A brain-friendly, visually rich introduction to Java programming covering OOP, threading, networking, and GUI. Perfect for beginners.", "url": "https://www.oreilly.com/library/view/head-first-java/9781492091646/", "pages": 688, "year": 2022, "difficulty": "beginner" },
+    { "title": "Effective Java", "author": "Joshua Bloch", "description": "The definitive guide to Java best practices with 90 items covering object creation, generics, enums, lambdas, streams, concurrency, and serialization.", "url": "https://www.oreilly.com/library/view/effective-java-3rd/9780134686097/", "pages": 488, "year": 2018, "difficulty": "intermediate" },
+    { "title": "Java Concurrency in Practice", "author": "Brian Goetz", "description": "The authoritative reference on Java concurrency covering threading, synchronization, Latch, the Java Memory Model, and concurrent collections.", "url": "https://www.oreilly.com/library/view/java-concurrency-in/0321349601/", "pages": 375, "year": 2006, "difficulty": "advanced" },
+    { "title": "Core Java Volume I: Fundamentals", "author": "Cay S. Horstmann", "description": "Comprehensive coverage of Java fundamentals including OOP, interfaces, lambda expressions, collections, and event handling.", "url": "https://www.oreilly.com/library/view/core-java-volume/9780138051817/", "pages": 944, "year": 2021, "difficulty": "beginner" },
+    { "title": "Core Java Volume II: Advanced Features", "author": "Cay S. Horstmann", "description": "Advanced topics including streams, XML, networking, database programming, internationalization, security, annotations, and JVM.", "url": "https://www.oreilly.com/library/view/core-java-volume/9780138051862/", "pages": 1040, "year": 2022, "difficulty": "intermediate" },
+    { "title": "Modern Java in Action", "author": "Raoul-Gabriel Urma, Mario Fusco, Alan Mycroft", "description": "Covers Java 8 to 21 features including lambdas, streams, Optional, CompletableFuture, the new Date/Time API, and functional-style programming.", "url": "https://www.oreilly.com/library/view/modern-java-in/9781617293566/", "pages": 584, "year": 2018, "difficulty": "intermediate" },
+    { "title": "Spring in Action", "author": "Craig Walls", "description": "Practical guide to Spring Boot, Spring MVC, Spring Data, Spring Security, and reactive programming with real-world examples.", "url": "https://www.oreilly.com/library/view/spring-in-action/9781617294945/", "pages": 520, "year": 2022, "difficulty": "intermediate" },
+    { "title": "Thinking in Java", "author": "Bruce Eckel", "description": "Deep exploration of Java concepts with emphasis on design, idioms, and programming philosophy. Free online edition available.", "url": "https://www.oreilly.com/library/view/thinking-in-java/9780131872486/", "pages": 1150, "year": 2006, "difficulty": "intermediate" },
+    { "title": "Clean Code", "author": "Robert C. Martin", "description": "Essential guide to writing readable, maintainable Java code with practical advice on naming, functions, error handling, and testing.", "url": "https://www.oreilly.com/library/view/clean-code-a/9780136083238/", "pages": 464, "year": 2008, "difficulty": "intermediate" },
+    { "title": "Java: The Complete Reference", "author": "Herbert Schildt", "description": "Comprehensive reference covering all aspects of Java including syntax, libraries, JavaBeans, servlets, and the module system.", "url": "https://www.oreilly.com/library/view/java-the-complete/9781260440254/", "pages": 1200, "year": 2024, "difficulty": "all" },
+    { "title": "The Well-Grounded Java Developer", "author": "Benjamin Evans, Jason Clark, Martijn Verburg", "description": "Covers modern Java including JPMS, JVM performance, concurrency, functional programming, and CI/CD practices.", "url": "https://www.oreilly.com/library/view/the-well-grounded-java/9781617298875/", "pages": 480, "year": 2021, "difficulty": "advanced" },
+    { "title": "Java Performance: In-Depth Advice for Tuning and Programming", "author": "Scott Oaks", "description": "Practical guide to JVM performance tuning including GC optimization, JIT compilation, heap analysis, and benchmarking.", "url": "https://www.oreilly.com/library/view/java-performance-in/9780134686097/", "pages": 640, "year": 2020, "difficulty": "advanced" },
+    { "title": "Designing Data-Intensive Applications", "author": "Martin Kleppmann", "description": "While not Java-specific, this is essential for Java developers building distributed systems covering databases, streams, batch processing, and consistency.", "url": "https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/", "pages": 616, "year": 2017, "difficulty": "advanced" },
+    { "title": "Reactive Spring", "author": "Josh Long", "description": "Guide to building reactive applications with Spring WebFlux, Reactor, RSocket, and reactive data access.", "url": "https://www.oreilly.com/library/view/reactive-spring/9781098727522/", "pages": 350, "year": 2022, "difficulty": "advanced" },
+    { "title": "Java 17 for Absolute Beginners", "author": "Iuliana Cosmina", "description": "Modern introduction to Java covering the latest features including records, sealed classes, and pattern matching.", "url": "https://www.oreilly.com/library/view/java-17-for/9781484270790/", "pages": 600, "year": 2021, "difficulty": "beginner" },
+    { "title": "Mastering Spring Boot 3", "author": "Moises Macero", "description": "Covers Spring Boot 3, Spring Cloud, Kubernetes integration, reactive microservices, and production-ready deployment.", "url": "https://www.oreilly.com/library/view/mastering-spring-boot/9781617296949/", "pages": 400, "year": 2023, "difficulty": "intermediate" },
+    { "title": "Test-Driven Java Development", "author": "Alex Garcia", "description": "Learn TDD in Java with JUnit 5, Mockito, AssertJ, and integration testing techniques.", "url": "https://www.oreilly.com/library/view/test-driven-java-development/9781783987429/", "pages": 350, "year": 2022, "difficulty": "intermediate" }
+  ],
+
+  "projects": [
+    {
+      "title": "Console-Based Banking Application",
+      "description": "Build a complete banking system with account creation, deposits, withdrawals, fund transfers, transaction history, and interest calculation using OOP principles.",
+      "difficulty": "Beginner",
+      "techStack": ["Core Java", "File I/O", "Collections"],
+      "topics": ["OOP", "Exception Handling", "File Persistence"]
+    },
+    {
+      "title": "Student Management System with SQL Database",
+      "description": "Create a CRUD application for managing student records with JDBC, MySQL, search functionality, and pagination using DAO pattern.",
+      "difficulty": "Intermediate",
+      "techStack": ["Core Java", "JDBC", "MySQL"],
+      "topics": ["JDBC", "DAO Pattern", "Database Design"]
+    },
+    {
+      "title": "Multi-Threaded Chat Server",
+      "description": "Build a concurrent chat server supporting multiple clients with real-time messaging, user presence, and private messaging using socket programming and threads.",
+      "difficulty": "Intermediate",
+      "techStack": ["Core Java", "Socket Programming", "Multithreading"],
+      "topics": ["Networking", "Concurrency", "Producer-Consumer"]
+    },
+    {
+      "title": "RESTful Task Management API with Spring Boot",
+      "description": "Develop a complete task management REST API with CRUD operations, authentication, pagination, filtering, and Swagger documentation using Spring Boot.",
+      "difficulty": "Intermediate",
+      "techStack": ["Spring Boot", "Spring Data JPA", "PostgreSQL", "Spring Security"],
+      "topics": ["REST APIs", "Spring Boot", "JPA", "Security"]
+    },
+    {
+      "title": "E-Commerce Microservices Platform",
+      "description": "Build a microservices-based e-commerce platform with separate services for product catalog, orders, inventory, payments, and notifications using Spring Cloud.",
+      "difficulty": "Advanced",
+      "techStack": ["Spring Boot", "Spring Cloud", "Docker", "Kafka", "Redis"],
+      "topics": ["Microservices", "Event-Driven", "API Gateway", "Service Discovery"]
+    },
+    {
+      "title": "Real-Time Data Pipeline with Kafka Streams",
+      "description": "Implement a real-time data processing pipeline that ingests, transforms, and analyzes streaming data using Kafka Streams API in Java.",
+      "difficulty": "Advanced",
+      "techStack": ["Java", "Kafka", "Kafka Streams", "Maven"],
+      "topics": ["Stream Processing", "Data Pipelines", "Functional Programming"]
+    },
+    {
+      "title": "Custom JVM Language Interpreter",
+      "description": "Build a simple domain-specific language (DSL) interpreter with lexer, parser, and AST evaluator, demonstrating JVM bytecode and compilation concepts.",
+      "difficulty": "Advanced",
+      "techStack": ["Core Java", "JVM Bytecode", "Antlr"],
+      "topics": ["Compiler Design", "JVM Internals", "Language Processing"]
+    },
+    {
+      "title": "Distributed Cache System",
+      "description": "Design and implement a distributed caching system with TTL, eviction policies (LRU, LFU), clustering, and REST API using Netty or Spring WebFlux.",
+      "difficulty": "Advanced",
+      "techStack": ["Java", "Netty", "Spring WebFlux", "Reactive Programming"],
+      "topics": ["Distributed Systems", "Caching", "Reactive Programming", "Concurrency"]
+    }
+  ],
+
+  "videoResources": [
+    { "title": "Java Programming Complete Course", "platform": "YouTube", "url": "https://www.youtube.com/watch?v=grEKMHGYyns", "duration": "12+ hours", "difficulty": "beginner", "channel": "freeCodeCamp" },
+    { "title": "Java Tutorial for Beginners", "platform": "YouTube", "url": "https://www.youtube.com/watch?v=eIrMbAQSU34", "duration": "9+ hours", "difficulty": "beginner", "channel": "Programming with Mosh" },
+    { "title": "Java OOP Concepts", "platform": "YouTube", "url": "https://www.youtube.com/watch?v=6T_HgnjoYwM", "duration": "2 hours", "difficulty": "beginner", "channel": "Telusko" },
+    { "title": "Java Collections Framework", "platform": "YouTube", "url": "https://www.youtube.com/watch?v=rzA7UJ-hQn4", "duration": "4 hours", "difficulty": "intermediate", "channel": "Coding with John" },
+    { "title": "Java Multithreading Complete Course", "platform": "YouTube", "url": "https://www.youtube.com/watch?v=WldMTt3L2c0", "duration": "5 hours", "difficulty": "intermediate", "channel": "Coding with John" },
+    { "title": "Java 8 Streams Tutorial", "platform": "YouTube", "url": "https://www.youtube.com/watch?v=1OpAgZv9Xqg", "duration": "2 hours", "difficulty": "intermediate", "channel": "Amigoscode" },
+    { "title": "Spring Boot Full Course", "platform": "YouTube", "url": "https://www.youtube.com/watch?v=9SGDpanrc8U", "duration": "10+ hours", "difficulty": "intermediate", "channel": "Amigoscode" },
+    { "title": "Spring Boot Microservices Course", "platform": "YouTube", "url": "https://www.youtube.com/watch?v=Du0gYU1GkDs", "duration": "8 hours", "difficulty": "advanced", "channel": "Siva Reddy" },
+    { "title": "JVM Internals and GC Tuning", "platform": "YouTube", "url": "https://www.youtube.com/watch?v=rX5AixFjQIA", "duration": "3 hours", "difficulty": "advanced", "channel": "JetBrains" },
+    { "title": "Complete Java Course (New)", "platform": "YouTube", "url": "https://www.youtube.com/playlist?list=PLsyeobzWxl7pe_IiTfNyrTkw7TYsGa8oO", "duration": "Playlist", "difficulty": "beginner", "channel": "Telusko" },
+    { "title": "Java Design Patterns", "platform": "YouTube", "url": "https://www.youtube.com/watch?v=v9ejT8FO-7I", "duration": "4 hours", "difficulty": "intermediate", "channel": "freeCodeCamp" },
+    { "title": "Intro to Java Programming (Stanford)", "platform": "YouTube", "url": "https://www.youtube.com/watch?v=KdHh5dyANX8", "duration": "Full Course", "difficulty": "beginner", "channel": "Stanford University" },
+    { "title": "Reactive Programming with Spring WebFlux", "platform": "YouTube", "url": "https://www.youtube.com/watch?v=OHdA-F_N26I", "duration": "3 hours", "difficulty": "advanced", "channel": "Java Brains" },
+    { "title": "Java Records, Sealed Classes & Pattern Matching", "platform": "YouTube", "url": "https://www.youtube.com/watch?v=mqD9hHQjWpE", "duration": "1 hour", "difficulty": "intermediate", "channel": "Oracle" },
+    { "title": "Virtual Threads in Java 21", "platform": "YouTube", "url": "https://www.youtube.com/watch?v=5E0LU85EnTI", "duration": "45 min", "difficulty": "advanced", "channel": "Oracle Java" },
+    { "title": "GraphQL with Spring Boot", "platform": "YouTube", "url": "https://www.youtube.com/watch?v=HuVbZkHAb1g", "duration": "2 hours", "difficulty": "advanced", "channel": "Amigoscode" },
+    { "title": "gRPC with Java Tutorial", "platform": "YouTube", "url": "https://www.youtube.com/watch?v=VFb2VhLPqFc", "duration": "1.5 hours", "difficulty": "advanced", "channel": "Daily Code Buffer" },
+    { "title": "Java Unit Testing with JUnit 5 & Mockito", "platform": "YouTube", "url": "https://www.youtube.com/watch?v=bmLJWMiLPRg", "duration": "3 hours", "difficulty": "intermediate", "channel": "Amigoscode" },
+    { "title": "Maven and Gradle Build Tools", "platform": "YouTube", "url": "https://www.youtube.com/watch?v=Xc-8KCHQa54", "duration": "2 hours", "difficulty": "intermediate", "channel": "Programming with Mosh" }
+  ],
+
+  "bestPractices": [
+    "Always use meaningful, descriptive names for classes, methods, and variables following Java naming conventions (PascalCase for classes, camelCase for methods/variables, UPPER_SNAKE_CASE for constants)",
+    "Follow the Single Responsibility Principle — each class should have one reason to change",
+    "Prefer composition over inheritance to achieve code reuse and flexibility",
+    "Use immutable objects where possible (final class, private fields, no setters, defensive copying in constructors)",
+    "Always override equals() and hashCode() together when using objects in collections",
+    "Avoid null returns — use Optional, empty collections, or the Null Object pattern",
+    "Close resources properly — use try-with-resources for AutoCloseable resources (streams, connections, files)",
+    "Program to interfaces, not implementations, for loose coupling",
+    "Keep methods short and focused — a method should do one thing and do it well",
+    "Minimize mutability — prefer final fields and immutable data structures",
+    "Use StringBuilder/StringBuffer for string concatenation in loops",
+    "Catch specific exceptions, never catch generic Exception or Throwable",
+    "Use Spring Boot's constructor injection over field injection for better testability",
+    "Write unit tests first (TDD) and aim for high coverage on business logic",
+    "Cache frequently accessed data with proper TTL and invalidation strategies",
+    "Profile before optimizing — always measure performance before making changes",
+    "Use SLF4J with parameterized logging instead of string concatenation",
+    "Keep configuration external — use application.yml/properties, environment variables, or configuration servers",
+    "Version your APIs with semantic versioning and never break backward compatibility in the same major version",
+    "Use Java modules (JPMS) for large applications to enforce strong encapsulation"
+  ],
+
+  "careerOpportunities": [
+    { "role": "Junior Java Developer", "description": "Entry-level role focused on writing and maintaining Java code, unit testing, bug fixing, and participating in code reviews under senior guidance.", "skills": ["Core Java", "SQL", "Spring Boot basics", "Git", "JUnit"] },
+    { "role": "Java Backend Developer", "description": "Design and implement server-side logic, build RESTful APIs, integrate databases, handle authentication, and optimize performance.", "skills": ["Java", "Spring Boot", "Spring Data JPA", "REST APIs", "PostgreSQL/MySQL", "Docker"] },
+    { "role": "Android Developer", "description": "Build native Android applications using Java (or Kotlin), implement UI components, handle device features, and publish apps on Google Play Store.", "skills": ["Android SDK", "Java", "XML", "Material Design", "REST APIs", "Firebase"] },
+    { "role": "Big Data Engineer", "description": "Build and maintain big data infrastructure using Hadoop, Spark, and Kafka ecosystems. Develop data pipelines and ETL processes in Java.", "skills": ["Java", "Apache Spark", "Hadoop", "Kafka", "Hive", "HBase", "SQL"] },
+    { "role": "Spring Boot / Microservices Developer", "description": "Specialize in building cloud-native microservices using Spring Boot, Spring Cloud, Docker, and Kubernetes. Design distributed systems with resilience and scalability.", "skills": ["Spring Boot", "Spring Cloud", "Docker", "Kubernetes", "Microservices", "Event-Driven Architecture"] },
+    { "role": "Solutions Architect", "description": "Design technical architecture for enterprise systems, choose technology stacks, define coding standards, and guide development teams on best practices.", "skills": ["Java Enterprise", "System Design", "Cloud (AWS/Azure/GCP)", "Architecture Patterns", "Leadership"] },
+    { "role": "Lead Java Developer", "description": "Lead development teams, conduct code reviews, design system architecture, mentor junior developers, and drive technical decisions.", "skills": ["Java", "Spring Ecosystem", "DevOps", "Leadership", "System Design", "Agile/Scrum"] },
+    { "role": "JVM Performance Engineer", "description": "Specialize in JVM tuning, garbage collection optimization, heap analysis, thread dump analysis, and application performance monitoring.", "skills": ["JVM Internals", "GC Tuning", "Profiling", "JMH", "APM Tools (AppDynamics, New Relic)"] }
+  ],
+
+  "roadmap": [
+    "Java Fundamentals & Syntax",
+    "Object-Oriented Programming in Java",
+    "Exception Handling & File I/O",
+    "Collections Framework & Generics",
+    "Multithreading & Concurrency",
+    "Java 8+ Features & Functional Programming",
+    "JDBC & Database Programming",
+    "Spring Boot & Microservices",
+    "Advanced Java & JVM Internals",
+    "Enterprise Architecture & Best Practices"
+  ],
+
+  "related": ["spring", "kotlin", "android", "scala", "groovy"]
+}

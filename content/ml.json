@@ -1,0 +1,376 @@
+{
+  "id": "ml",
+  "slug": "machine-learning",
+  "name": "Machine Learning",
+  "icon": "🧠",
+  "color": "#FF6B35",
+  "category": "AI & Machine Learning",
+  "description": "A subset of AI focused on algorithms that learn patterns from data and make predictions or decisions without explicit programming. Powers recommendation systems, fraud detection, and predictive analytics.",
+  "difficulty": "Advanced",
+  "paradigms": ["Supervised Learning", "Unsupervised Learning", "Reinforcement Learning", "Semi-Supervised Learning", "Self-Supervised Learning"],
+  "tags": ["ml", "machine-learning", "data-science", "supervised", "unsupervised", "classification", "regression", "clustering", "ensemble"],
+  "overview": "Machine Learning is the scientific study of algorithms and statistical models that computer systems use to progressively improve their performance on a specific task through experience (data). Arthur Samuel coined the term in 1959. ML is divided into supervised learning (learning from labeled examples), unsupervised learning (finding hidden patterns in unlabeled data), and reinforcement learning (learning through interaction). The field has advanced from linear models to complex deep neural networks, gradient boosting (XGBoost), and foundation models. ML powers modern recommendation systems, search engines, fraud detection, medical diagnosis, autonomous vehicles, and language models. The ML workflow involves data collection, cleaning, feature engineering, model selection, training, evaluation, hyperparameter tuning, and deployment. ML has democratized AI, enabling practitioners to build intelligent systems without being AI researchers.",
+
+  "learningPath": [
+    {
+      "stage": 1,
+      "title": "ML Foundations & Python Ecosystem",
+      "duration": "3-4 weeks",
+      "description": "Set up the ML development environment and learn essential Python libraries for data manipulation and visualization.",
+      "topics": [
+        "What is Machine Learning? Definition, history, types, applications",
+        "Supervised vs Unsupervised vs Reinforcement Learning",
+        "The ML workflow: problem definition, data, model, evaluation, deployment",
+        "Setting up Python ML environment (conda, pip, Jupyter)",
+        "NumPy: arrays, broadcasting, linear algebra, random sampling",
+        "Pandas: DataFrames, Series, I/O, groupby, merge, pivot, apply",
+        "Matplotlib: figure, axes, plots, customization, subplots",
+        "Seaborn: statistical plots, heatmaps, pairplots, categorical plots",
+        "Exploratory Data Analysis (EDA) workflow",
+        "Data cleaning: missing values, outliers, duplicates, inconsistent data",
+        "Data preprocessing: scaling, normalization, encoding categorical variables",
+        "Train/validation/test split and stratified sampling",
+        "ML project structure and reproducibility"
+      ],
+      "projects": ["EDA on Titanic/Housing dataset", "Automated data cleaning pipeline", "Feature engineering notebook", "Data visualization dashboard"]
+    },
+    {
+      "stage": 2,
+      "title": "Regression: Prediction & Modeling",
+      "duration": "3-4 weeks",
+      "description": "Master regression techniques for predicting continuous values: from simple linear to regularized models.",
+      "topics": [
+        "Simple linear regression (one variable, least squares)",
+        "Multiple linear regression, interaction terms, polynomial features",
+        "Assumptions of linear regression (linearity, independence, homoscedasticity, normality)",
+        "Gradient descent for linear regression: batch, stochastic, mini-batch",
+        "Normal equation for closed-form solution",
+        "Regression metrics: MSE, RMSE, MAE, R², adjusted R²",
+        "Overfitting and underfitting in regression",
+        "Regularization: Ridge (L2), Lasso (L1), ElasticNet",
+        "Polynomial regression and basis functions",
+        "Logistic regression (despite name, it's classification)",
+        "Decision trees for regression",
+        "Random forest regression and feature importance",
+        "Gradient boosting regression (XGBoost, LightGBM, CatBoost)",
+        "Evaluation: residual plots, Q-Q plots, learning curves"
+      ],
+      "projects": ["House price prediction with multiple regression", "Stock price trend analysis", "Sales forecasting with time series features", "Energy consumption prediction"]
+    },
+    {
+      "stage": 3,
+      "title": "Classification: Categorization & Decision Making",
+      "duration": "4-5 weeks",
+      "description": "Learn classification algorithms, evaluation metrics, and practical techniques for categorical prediction.",
+      "topics": [
+        "Binary classification: logistic regression, decision boundary",
+        "Evaluation metrics: accuracy, precision, recall, F1-score, specificity",
+        "ROC curves and AUC — interpreting classifier performance",
+        "Confusion matrix and classification reports",
+        "k-Nearest Neighbors (k-NN): distance metrics, optimal k, curse of dimensionality",
+        "Decision trees: ID3, C4.5, CART, entropy, Gini impurity, information gain",
+        "Tree pruning: pre-pruning (max_depth, min_samples_split) vs post-pruning",
+        "Support Vector Machines (SVM): hard margin, soft margin, kernel trick",
+        "SVM kernels: linear, polynomial, RBF, sigmoid — when to use",
+        "Naive Bayes: Gaussian, Multinomial, Bernoulli — assumptions and use cases",
+        "Multiclass classification: one-vs-rest, one-vs-one, softmax regression",
+        "Multi-label classification (multiple labels per instance)",
+        "Imbalanced classification: SMOTE, ADASYN, class weights, sampling strategies",
+        "Calibration: Platt scaling, isotonic regression for probability calibration"
+      ],
+      "projects": ["Spam email classifier", "Customer churn prediction", "Credit risk assessment model", "Disease diagnosis classifier"]
+    },
+    {
+      "stage": 4,
+      "title": "Ensemble Methods & Advanced Models",
+      "duration": "3-4 weeks",
+      "description": "Master ensemble learning: bagging, boosting, stacking, and state-of-the-art tree-based models.",
+      "topics": [
+        "Bias-variance tradeoff and how ensembles help",
+        "Bagging: bootstrap sampling, parallel training, aggregation",
+        "Random Forest: how it works, feature importance, proximity, OOB error",
+        "Boosting: sequential learning, weighting misclassified samples",
+        "AdaBoost: adaptive boosting algorithm",
+        "Gradient Boosting Machines (GBM): gradient descent in function space",
+        "XGBoost: regularization, tree pruning, handling missing values, GPU acceleration",
+        "LightGBM: Gradient-based One-Side Sampling (GOSS), Exclusive Feature Bundling (EFB)",
+        "CatBoost: categorical feature handling, ordered boosting, symmetric trees",
+        "Voting classifiers: hard voting vs soft voting",
+        "Stacking: meta-learners, base models, out-of-fold predictions",
+        "Blending: holdout-based stacking",
+        "Feature importance methods: impurity-based, permutation importance, SHAP",
+        "Hyperparameter tuning for tree-based models"
+      ],
+      "projects": ["Kaggle competition entry with XGBoost", "Ensemble model for loan default prediction", "Feature importance analysis pipeline", "AutoML-style model comparison"]
+    },
+    {
+      "stage": 5,
+      "title": "Unsupervised Learning & Clustering",
+      "duration": "3-4 weeks",
+      "description": "Discover hidden patterns in unlabeled data: clustering, dimensionality reduction, and anomaly detection.",
+      "topics": [
+        "k-Means clustering: algorithm, initialization (k-means++), elbow method, silhouette score",
+        "Hierarchical clustering: agglomerative, divisive, dendrograms, linkages (single, complete, average, Ward)",
+        "DBSCAN: density-based clustering, eps, minPts, handling noise",
+        "Gaussian Mixture Models (GMM): EM algorithm, responsibilities, covariance types",
+        "Cluster evaluation: internal (silhouette, Davies-Bouldin, Calinski-Harabasz) and external (ARI, NMI)",
+        "Dimensionality reduction: PCA (variance explained, components, reconstruction)",
+        "t-SNE: perplexity, learning rate, preserving local structure",
+        "UMAP: faster than t-SNE, preserves global structure better",
+        "Feature extraction vs feature selection",
+        "Anomaly detection: Isolation Forest, LOF, one-class SVM, autoencoders",
+        "Association rules: Apriori algorithm, FP-Growth, support, confidence, lift",
+        "Self-organizing maps (SOM)",
+        "Matrix factorization: SVD, NMF for recommendation systems"
+      ],
+      "projects": ["Customer segmentation for e-commerce", "Movie recommendation system with matrix factorization", "Anomaly detection in network traffic", "Document clustering for topic discovery"]
+    },
+    {
+      "stage": 6,
+      "title": "Feature Engineering & Selection",
+      "duration": "2-3 weeks",
+      "description": "Master feature engineering techniques: creating, transforming, and selecting features for optimal model performance.",
+      "topics": [
+        "Feature construction: polynomial features, interaction terms, domain-specific features",
+        "Feature transformation: log, Box-Cox, Yeo-Johnson, binning, discretization",
+        "Encoding categorical variables: one-hot, label, ordinal, target encoding, frequency encoding",
+        "Handling missing values: mean/median/mode, KNN imputation, MICE, predictive imputation",
+        "Feature scaling: standardization, min-max normalization, robust scaling, max-abs scaling",
+        "Feature selection: filter methods (correlation, chi-squared, mutual information)",
+        "Wrapper methods: forward selection, backward elimination, recursive feature elimination (RFE)",
+        "Embedded methods: L1 regularization, feature importance from trees",
+        "Feature extraction from text: TF-IDF, word embeddings, sentence transformers",
+        "Feature extraction from images: pre-trained CNN features, color histograms, HOG",
+        "Feature extraction from time series: rolling statistics, FFT, wavelets",
+        "Date/time feature engineering: day of week, month, holiday flags, cyclical encoding",
+        "Working with geospatial features: clustering, distances, reverse geocoding",
+        "Automated feature engineering: Featuretools, tsfresh"
+      ],
+      "projects": ["Feature engineering pipeline for tabular data", "Automated feature selection tool", "Feature importance analysis with SHAP", "Time series feature engineering"]
+    },
+    {
+      "stage": 7,
+      "title": "Neural Networks & Deep Learning Foundations",
+      "duration": "4-5 weeks",
+      "description": "Learn neural network fundamentals, building blocks, and practical training techniques with PyTorch or TensorFlow.",
+      "topics": [
+        "From logistic regression to neural networks",
+        "Perceptron and MLP (Multi-Layer Perceptron) architecture",
+        "Activation functions: sigmoid, tanh, ReLU, LeakyReLU, GELU, Swish — when to use each",
+        "Loss functions: MSE, cross-entropy, binary cross-entropy, categorical cross-entropy, huber loss",
+        "Backpropagation algorithm and automatic differentiation",
+        "Optimizers: SGD, Momentum, AdaGrad, RMSprop, Adam, AdamW, Lion",
+        "Learning rate scheduling: step decay, exponential decay, cosine annealing, warmup",
+        "Weight initialization: Xavier/Glorot, He, LeCun — importance for deep nets",
+        "Batch Normalization: internal covariate shift, training vs inference",
+        "Dropout: inverted dropout, dropout rate, Monte Carlo dropout for uncertainty",
+        "Regularization: weight decay (L2), label smoothing, early stopping, data augmentation",
+        "Transfer learning: pre-training, fine-tuning, feature extraction, progressive unfreezing",
+        "Learning curves, underfitting vs overfitting, capacity control",
+        "Gradient clipping, gradient accumulation, mixed precision training",
+        "TensorBoard and Weights & Biases for experiment tracking",
+        "PyTorch vs TensorFlow — ecosystem comparison"
+      ],
+      "projects": ["MLP for fashion MNIST classification", "Transfer learning for custom image dataset", "Neural network from scratch in NumPy", "Experiment tracking with W&B"]
+    },
+    {
+      "stage": 8,
+      "title": "Model Evaluation, Validation & Tuning",
+      "duration": "3-4 weeks",
+      "description": "Master systematic approaches to model evaluation, hyperparameter tuning, and cross-validation strategies.",
+      "topics": [
+        "Cross-validation: k-fold, stratified, group, time series, leave-one-out",
+        "Hyperparameter tuning: grid search, random search, Bayesian optimization (Optuna, Hyperopt)",
+        "Hyperopt: Tree-structured Parzen Estimator (TPE), trials, space definition",
+        "Optuna: define-by-run, pruning, multi-objective optimization",
+        "Learning curves: diagnosing bias vs variance, data sufficiency",
+        "Validation curves: tuning single hyperparameters",
+        "Confidence intervals for model performance (bootstrapping)",
+        "Statistical comparison of models: McNemar's test, Wilcoxon, paired t-test",
+        "Model calibration: reliability diagrams, Brier score, calibration curves",
+        "Threshold tuning: precision-recall curves, F-beta score, cost-sensitive learning",
+        "A/B testing for model comparison in production",
+        "Model interpretability: SHAP (Tree/Deep/Kernel explainer), LIME, partial dependence plots",
+        "Permutation feature importance — model-agnostic feature importance",
+        "Error analysis: confusion matrix breakdown, stratifying errors by subgroups",
+        "Winning Kaggle strategies: ensemble, stacking, feature engineering, leak detection"
+      ],
+      "projects": ["Automated hyperparameter tuning pipeline", "Model comparison report with statistical tests", "SHAP explainability dashboard", "Kaggle competition submission"]
+    },
+    {
+      "stage": 9,
+      "title": "MLOps: Production Machine Learning",
+      "duration": "4-5 weeks",
+      "description": "Learn to deploy, monitor, and maintain ML models in production: MLOps, pipelines, and infrastructure.",
+      "topics": [
+        "MLOps lifecycle: data, experiment, model, deployment, monitoring",
+        "MLflow: experiment tracking, model registry, packaging, serving",
+        "DVC (Data Version Control): versioning datasets, pipelines, experiments",
+        "Weights & Biases: experiment tracking, hyperparameter sweeps, model registry",
+        "Model serialization: pickle, joblib, ONNX, TorchScript, TensorFlow SavedModel",
+        "Model serving: Flask/FastAPI REST API, TensorFlow Serving, TorchServe",
+        "Serverless deployment: AWS SageMaker, GCP Vertex AI, Azure ML",
+        "Docker containerization for ML models",
+        "CI/CD for ML: testing data, models, pipelines — GitHub Actions, Jenkins",
+        "Feature stores: Feast, Tecton — consistent feature computation and serving",
+        "Model monitoring: data drift (KL divergence, PSI), concept drift, performance decay",
+        "Evidently AI, NannyML, WhyLabs for model monitoring",
+        "A/B testing and multi-armed bandits for model selection in production",
+        "Model rollback and champion/challenger strategy",
+        "Distributed training: DDP, FSDP, DeepSpeed, Horovod",
+        "Model compression: quantization, pruning, knowledge distillation",
+        "Edge ML: TensorFlow Lite, ONNX Runtime, CoreML, PyTorch Mobile",
+        "Data pipelines: Apache Airflow, Prefect, Kubeflow Pipelines"
+      ],
+      "projects": ["End-to-end ML pipeline with MLflow", "Model serving API with FastAPI + Docker", "Model monitoring dashboard with Evidently", "Feature engineering pipeline with Feast"]
+    },
+    {
+      "stage": 10,
+      "title": "Advanced ML & Research Topics",
+      "duration": "4-6 weeks",
+      "description": "Explore advanced ML: self-supervised learning, graph neural networks, causal ML, time series, and foundation models.",
+      "topics": [
+        "Self-supervised learning: contrastive learning (SimCLR, MoCo), MAE, DINO",
+        "Graph Neural Networks: GCN, GAT, GraphSAGE, GIN — node/graph classification",
+        "Time series forecasting: ARIMA, Prophet, LSTM, Transformers (Informer, PatchTST)",
+        "Recommender systems: collaborative filtering, content-based, hybrid, neural (NeuMF)",
+        "Causal ML: double ML, causal forest, uplift modeling, do-calculus",
+        "Federated learning: distributed training without centralizing data (FedAvg, FedProx)",
+        "Few-shot and zero-shot learning: meta-learning (MAML, Prototypical Networks)",
+        "Active learning: uncertainty sampling, query-by-committee, expected model change",
+        "Multi-modal learning: combining text, image, audio inputs",
+        "AutoML: NAS (DARTS, ENAS), AutoKeras, H2O AutoML, AutoGluon",
+        "Online learning: incremental updates, concept drift adaptation (SGD, VW)",
+        "Probabilistic ML: Gaussian Processes, Bayesian deep learning, variational inference",
+        "Generative models: GANs (DCGAN, StyleGAN), VAEs, normalizing flows, diffusion models",
+        "Large Language Model fine-tuning: PEFT, LoRA, QLoRA, instruction tuning",
+        "Responsible ML: fairness constraints, differential privacy, explainability"
+      ],
+      "projects": ["Graph neural network for molecular property prediction", "Time series forecasting system", "Federated learning simulation", "AutoML pipeline with model search"]
+    }
+  ],
+
+  "resources": [
+    { "name": "Stanford CS229: ML", "url": "https://cs229.stanford.edu", "type": "Course", "difficulty": "advanced", "free": true, "official": true },
+    { "name": "Stanford CS231n: CNNs", "url": "https://cs231n.stanford.edu", "type": "Course", "difficulty": "advanced", "free": true, "official": true },
+    { "name": "Scikit-learn Documentation", "url": "https://scikit-learn.org/stable/documentation.html", "type": "Documentation", "difficulty": "all", "free": true, "official": true },
+    { "name": "Scikit-learn User Guide", "url": "https://scikit-learn.org/stable/user_guide.html", "type": "Tutorial", "difficulty": "all", "free": true, "official": true },
+    { "name": "XGBoost Documentation", "url": "https://xgboost.readthedocs.io", "type": "Documentation", "difficulty": "intermediate", "free": true, "official": true },
+    { "name": "LightGBM Documentation", "url": "https://lightgbm.readthedocs.io", "type": "Documentation", "difficulty": "intermediate", "free": true, "official": true },
+    { "name": "CatBoost Documentation", "url": "https://catboost.ai/docs", "type": "Documentation", "difficulty": "intermediate", "free": true, "official": true },
+    { "name": "PyTorch Documentation", "url": "https://pytorch.org/docs/stable/", "type": "Documentation", "difficulty": "intermediate", "free": true, "official": true },
+    { "name": "TensorFlow Documentation", "url": "https://www.tensorflow.org/api_docs", "type": "Documentation", "difficulty": "intermediate", "free": true, "official": true },
+    { "name": "MLflow Documentation", "url": "https://mlflow.org/docs/latest/", "type": "Documentation", "difficulty": "intermediate", "free": true, "official": true },
+    { "name": "Kaggle Learn", "url": "https://www.kaggle.com/learn", "type": "Tutorial", "difficulty": "beginner", "free": true, "official": true },
+    { "name": "Google ML Crash Course", "url": "https://developers.google.com/machine-learning/crash-course", "type": "Course", "difficulty": "beginner", "free": true, "official": true },
+    { "name": "Hands-On ML with Scikit-Learn", "url": "https://github.com/ageron/handson-ml3", "type": "Tutorial", "difficulty": "all", "free": true, "official": false },
+    { "name": "StatQuest (ML Videos)", "url": "https://www.youtube.com/@statquest", "type": "Video", "difficulty": "all", "free": true, "official": false },
+    { "name": "d2l.ai (Dive into Deep Learning)", "url": "https://d2l.ai", "type": "Tutorial", "difficulty": "intermediate", "free": true, "official": false },
+    { "name": "Awesome ML (GitHub)", "url": "https://github.com/ujjwalkarn/Machine-Learning-Tutorials", "type": "Reference", "difficulty": "all", "free": true, "official": false },
+    { "name": "Papers With Code (ML)", "url": "https://paperswithcode.com/area/machine-learning", "type": "Reference", "difficulty": "advanced", "free": true, "official": false },
+    { "name": "OpenML", "url": "https://www.openml.org", "type": "Tool", "difficulty": "all", "free": true, "official": false },
+    { "name": "Optuna Documentation", "url": "https://optuna.org", "type": "Documentation", "difficulty": "intermediate", "free": true, "official": true },
+    { "name": "SHAP Documentation", "url": "https://shap.readthedocs.io", "type": "Documentation", "difficulty": "intermediate", "free": true, "official": true },
+    { "name": "Evidently AI Documentation", "url": "https://docs.evidentlyai.com", "type": "Documentation", "difficulty": "advanced", "free": true, "official": true },
+    { "name": "Fast.ai Practical Deep Learning", "url": "https://course.fast.ai", "type": "Course", "difficulty": "beginner", "free": true, "official": false }
+  ],
+
+  "cheatSheets": [
+    { "name": "Scikit-learn Algorithm Cheat Sheet", "url": "https://scikit-learn.org/stable/tutorial/machine_learning_map/index.html", "source": "Scikit-learn", "topics": ["algorithms", "selection"], "format": "Web" },
+    { "name": "Machine Learning Algorithms Cheat Sheet", "url": "https://www.analyticsvidhya.com/blog/2015/09/ai-cheat-sheet/", "source": "Analytics Vidhya", "topics": ["supervised", "unsupervised", "evaluation"], "format": "Web" },
+    { "name": "Pandas Cheat Sheet", "url": "https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf", "source": "pandas", "topics": ["data-manipulation", "dataframe"], "format": "PDF" },
+    { "name": "PyTorch Cheat Sheet", "url": "https://pytorch.org/tutorials/beginner/ptcheat.html", "source": "PyTorch", "topics": ["tensors", "neural-networks", "optimization"], "format": "Web" },
+    { "name": "ML Evaluation Metrics Cheat Sheet", "url": "https://www.dataschool.io/cheat-sheets-for-machine-learning/", "source": "Data School", "topics": ["metrics", "evaluation", "classification"], "format": "Web" },
+    { "name": "MLOps Cheat Sheet", "url": "https://ml-ops.org/content/cheat-sheet", "source": "MLOps.org", "topics": ["mlops", "pipelines", "deployment"], "format": "Web" }
+  ],
+
+  "interviewQuestions": [
+    { "question": "Explain the bias-variance tradeoff with examples.", "answer": "High bias (underfitting): model makes strong assumptions, e.g., linear regression on non-linear data — misses patterns. High variance (overfitting): model is too sensitive to training data, e.g., deep decision tree — captures noise. Increasing model complexity increases variance but decreases bias. The sweet spot minimizes total error (bias² + variance + irreducible error). Cross-validation helps find the optimal complexity.", "difficulty": "Medium", "topic": "Fundamentals" },
+    { "question": "What is the difference between bagging and boosting?", "answer": "Bagging (Random Forest): parallel training of independent models on bootstrap samples, reduces variance. Boosting (XGBoost): sequential training where each model corrects predecessor's errors, reduces bias. Bagging is good for high-variance models. Boosting risks overfitting but often achieves higher accuracy. Both reduce different components of error.", "difficulty": "Medium", "topic": "Ensemble Methods" },
+    { "question": "Explain gradient descent and its variants.", "answer": "Batch GD: computes gradient on entire dataset — accurate but slow for large data. Stochastic GD (SGD): computes gradient on one sample — fast but noisy updates. Mini-batch GD: computes gradient on small batch — balance between speed and stability. Challenges: learning rate selection, saddle points, local minima. Variants: Momentum (accelerates in consistent direction), RMSprop (adapts LR per parameter), Adam (Momentum + RMSprop).", "difficulty": "Medium", "topic": "Optimization" },
+    { "question": "What is cross-validation and why use it?", "answer": "Cross-validation (CV) evaluates model generalization by training on subsets and validating on held-out data. k-fold CV splits data into k folds, training on k-1 and validating on 1, repeating k times. Benefits: more reliable performance estimate than single split, reduces variance of evaluation, all data used for training and validation. Stratified CV preserves class proportions. Time series CV respects temporal order.", "difficulty": "Easy", "topic": "Evaluation" },
+    { "question": "How do you handle imbalanced datasets?", "answer": "Data-level: oversampling minority (SMOTE, ADASYN, random oversampling), undersampling majority (RandomUnderSampler, TomekLinks, Edited Nearest Neighbors). Algorithm-level: class weights, cost-sensitive learning, anomaly detection framing. Evaluation: use precision/recall/F1, ROC-AUC, PR-AUC instead of accuracy. Threshold: adjust decision threshold (not default 0.5). Ensemble: balanced bagging, EasyEnsemble, BalanceCascade.", "difficulty": "Medium", "topic": "Data" },
+    { "question": "What is the difference between L1 and L2 regularization?", "answer": "L1 (Lasso): adds sum of absolute weights to loss — produces sparse solutions (many weights become zero), useful for feature selection. L2 (Ridge): adds sum of squared weights to loss — shrinks weights but rarely to zero, handles multicollinearity well. ElasticNet: combination of both. L1 is more robust to outliers. L2 has analytical solution. Both reduce overfitting by penalizing large weights.", "difficulty": "Medium", "topic": "Regularization" },
+    { "question": "Explain the working of Random Forest.", "answer": "Random Forest builds multiple decision trees on bootstrap samples of the data. At each split, only a random subset of features is considered (feature bagging). Each tree votes, and majority decides (classification) or average gives output (regression). Benefits: handles high-dimensional data, estimates feature importance, OOB error for validation, resistant to overfitting, handles missing values. n_estimators and max_features are key hyperparameters.", "difficulty": "Medium", "topic": "Ensemble Methods" },
+    { "question": "What is the kernel trick in SVMs?", "answer": "The kernel trick allows SVMs to operate in a high-dimensional feature space without explicitly computing coordinates — instead computing dot products via kernel function. Common kernels: linear (no transformation), polynomial (degree d), RBF/Gaussian (infinite-dimensional mapping), sigmoid. RBF is default — maps to infinite dimensions, handles non-linear boundaries. Kernel choice depends on data structure and problem.", "difficulty": "Medium", "topic": "Classification" },
+    { "question": "How do you detect and prevent data leakage?", "answer": "Data leakage occurs when information from outside the training set (e.g., future data, target information) influences the model. Sources: using target to create features, scaling before splitting, temporal leakage (future info leaked), train/test contamination. Prevention: split before any preprocessing, use pipelines (scikit-learn Pipeline), no global statistics, careful feature engineering, temporal ordering for time series, separate feature/target computation.", "difficulty": "Hard", "topic": "Data" },
+    { "question": "Explain PCA: when and why to use it.", "answer": "PCA (Principal Component Analysis) finds orthogonal directions (principal components) of maximum variance and projects data onto them. Uses: dimensionality reduction (reduce features while retaining variance), noise reduction (discard low-variance components), visualization (2D/3D), decorrelation of features. PCA is sensitive to feature scaling (always standardize first). Choose number of components by explained variance ratio.", "difficulty": "Medium", "topic": "Dimensionality Reduction" },
+    { "question": "What is the difference between parametric and non-parametric models?", "answer": "Parametric models (linear regression, logistic regression, Naive Bayes) assume fixed functional form with finite parameters — faster training, less data required, but limited flexibility. Non-parametric models (k-NN, decision trees, SVMs, Random Forest) don't assume specific distribution — complexity grows with data, more flexible, but require more data and computational resources.", "difficulty": "Easy", "topic": "Fundamentals" }
+  ],
+
+  "books": [
+    { "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow", "author": "Aurélien Géron", "description": "Practical guide covering ML fundamentals, neural networks, deep learning, and production deployment with extensive code examples.", "url": "https://www.oreilly.com/library/view/hands-on-machine-learning/9781098125967/", "pages": 1020, "year": 2022, "difficulty": "beginner" },
+    { "title": "The Elements of Statistical Learning", "author": "Trevor Hastie, Robert Tibshirani, Jerome Friedman", "description": "Comprehensive statistical learning theory covering linear methods, basis expansions, SVMs, neural networks, and unsupervised learning.", "url": "https://hastie.su.domains/ElemStatLearn/", "pages": 764, "year": 2009, "difficulty": "advanced" },
+    { "title": "Introduction to Statistical Learning with Applications in R (ISLR)", "author": "Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani", "description": "Accessible introduction to statistical learning covering regression, classification, resampling, tree-based methods, SVM, and deep learning.", "url": "https://www.statlearning.com", "pages": 607, "year": 2021, "difficulty": "intermediate" },
+    { "title": "Pattern Recognition and Machine Learning", "author": "Christopher Bishop", "description": "Comprehensive ML textbook covering probability, linear models, neural networks, kernel methods, graphical models, and variational inference.", "url": "https://www.microsoft.com/en-us/research/people/cmbishop/prml-book/", "pages": 738, "year": 2006, "difficulty": "advanced" },
+    { "title": "Machine Learning Engineering", "author": "Andriy Burkov", "description": "Covers the engineering side of ML: project setup, data pipelines, model deployment, monitoring, and production challenges.", "url": "https://www.oreilly.com/library/view/machine-learning-engineering/9781999579579/", "pages": 300, "year": 2020, "difficulty": "intermediate" },
+    { "title": "Approaching (Almost) Any Machine Learning Problem", "author": "Abhishek Thakur", "description": "Practical guide to solving ML problems from Kaggle Grandmaster covering cross-validation, feature engineering, model building, and ensembles.", "url": "https://www.kaggle.com/abhishek/approaching-almost-any-machine-learning-problem", "pages": 280, "year": 2020, "difficulty": "intermediate" },
+    { "title": "Designing Machine Learning Systems", "author": "Chip Huyen", "description": "Production ML: data engineering, feature stores, model deployment, monitoring, and infrastructure for reliable ML systems.", "url": "https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/", "pages": 368, "year": 2022, "difficulty": "advanced" }
+  ],
+
+  "projects": [
+    { "title": "End-to-End Regression Pipeline", "description": "Full ML pipeline from data ingestion, cleaning, feature engineering, model training, hyperparameter tuning, to deployment with MLflow.", "difficulty": "Intermediate", "techStack": ["Python", "scikit-learn", "MLflow", "Pandas"], "topics": ["Regression", "Pipelines", "MLflow"] },
+    { "title": "Multiclass Image Classifier with Transfer Learning", "description": "Image classification using pre-trained CNN (ResNet/EfficientNet) fine-tuned on custom dataset with data augmentation.", "difficulty": "Intermediate", "techStack": ["PyTorch/TF", "ResNet", "Albumentations"], "topics": ["Deep Learning", "Transfer Learning", "CV"] },
+    { "title": "Kaggle Tabular Competition Solution", "description": "Complete Kaggle-style competition pipeline with EDA, feature engineering, ensemble stacking, and leaderboard optimization.", "difficulty": "Advanced", "techStack": ["XGBoost", "LightGBM", "CatBoost", "Optuna"], "topics": ["Ensembles", "Feature Engineering", "Competition"] },
+    { "title": "Real-Time Anomaly Detection System", "description": "Detect anomalies in streaming data using Isolation Forest with sliding window, alerting, and dashboard visualization.", "difficulty": "Advanced", "techStack": ["scikit-learn", "Kafka", "Grafana", "FastAPI"], "topics": ["Anomaly Detection", "MLOps", "Streaming"] },
+    { "title": "Recommendation System", "description": "Hybrid recommendation system combining collaborative filtering, matrix factorization, and content-based approaches.", "difficulty": "Intermediate", "techStack": ["Python", "Surprise", "scikit-learn", "FastAPI"], "topics": ["Recommendation", "Matrix Factorization", "CF"] },
+    { "title": "ML Model Monitoring Dashboard", "description": "Production monitoring system that tracks data drift, model performance, and sends alerts using Evidently AI.", "difficulty": "Advanced", "techStack": ["Evidently AI", "MLflow", "Streamlit", "Prometheus"], "topics": ["MLOps", "Monitoring", "Drift Detection"] }
+  ],
+
+  "videoResources": [
+    { "title": "Stanford CS229: Machine Learning", "platform": "YouTube", "url": "https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU", "duration": "Full Course", "difficulty": "advanced", "channel": "Stanford Online" },
+    { "title": "ML with Scikit-Learn (freeCodeCamp)", "platform": "YouTube", "url": "https://www.youtube.com/watch?v=hDKCxbp3DkA", "duration": "5 hours", "difficulty": "beginner", "channel": "freeCodeCamp" },
+    { "title": "StatQuest ML Course", "platform": "YouTube", "url": "https://www.youtube.com/playlist?list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF", "duration": "Full Course", "difficulty": "all", "channel": "StatQuest with Josh Starmer" },
+    { "title": "XGBoost Full Explanation", "platform": "YouTube", "url": "https://www.youtube.com/watch?v=OtD8wVaFm6E", "duration": "1 hour", "difficulty": "intermediate", "channel": "StatQuest" },
+    { "title": "PyTorch Deep Learning Course", "platform": "YouTube", "url": "https://www.youtube.com/watch?v=V_xro1bcAuY", "duration": "10 hours", "difficulty": "intermediate", "channel": "freeCodeCamp" },
+    { "title": "Machine Learning Engineering Course", "platform": "YouTube", "url": "https://www.youtube.com/playlist?list=PL7wAPgl1JVvUEb0dIygHzO4698tmcwLk9", "duration": "Full Course", "difficulty": "advanced", "channel": "Chip Huyen" },
+    { "title": "Kaggle Grandmaster Tips", "platform": "YouTube", "url": "https://www.youtube.com/watch?v=r2IGINRc3yU", "duration": "1 hour", "difficulty": "intermediate", "channel": "Abhishek Thakur" },
+    { "title": "MLOps Full Course", "platform": "YouTube", "url": "https://www.youtube.com/watch?v=06i43j7hoxQ", "duration": "6 hours", "difficulty": "advanced", "channel": "DataTalksClub" }
+  ],
+
+  "bestPractices": [
+    "Always split data before any preprocessing to prevent data leakage — use scikit-learn Pipeline",
+    "Start with simple models (linear regression, logistic regression, decision trees) — they're good baselines",
+    "Use domain knowledge for feature engineering — the best features often come from understanding the problem",
+    "Standardize features for gradient-based and distance-based models",
+    "Use cross-validation (preferably stratified k-fold) for reliable performance estimates",
+    "Monitor for data leakage: no future data, no target information in features, split before scaling",
+    "Log all experiments: hyperparameters, metrics, code version, data version",
+    "Use version control for both code (Git) and data (DVC)",
+    "Prefer simpler models when performance is comparable — Occam's Razor",
+    "Use ensembles (stacking, blending) for final models but understand they add complexity",
+    "Fix all data issues before model building — garbage in, garbage out",
+    "Set reproducible seeds for all random operations (numpy, sklearn, pytorch)",
+    "Use Optuna or hyperopt for hyperparameter tuning — better than grid/random search",
+    "Check model assumptions for statistical models (linearity, normality, homoscedasticity)",
+    "Test on out-of-distribution data to check generalization",
+    "Document model decisions, assumptions, and limitations",
+    "Implement model monitoring — data drift and concept drift can degrade performance silently",
+    "Use appropriate metrics: PR-AUC for imbalanced, RMSE for regression, etc.",
+    "Start with a simple deployable model and iterate — perfect is the enemy of good in production ML"
+  ],
+
+  "careerOpportunities": [
+    { "role": "Junior ML Engineer", "description": "Build ML models, clean data, write training pipelines, and deploy models under senior guidance.", "skills": ["Python", "scikit-learn", "Pandas", "SQL", "Git", "Basic Deep Learning"] },
+    { "role": "Machine Learning Engineer", "description": "Design and implement ML systems, optimize model performance, build data pipelines, and manage deployment.", "skills": ["Python", "ML Algorithms", "PyTorch/TF", "MLOps", "Docker", "Cloud ML"] },
+    { "role": "MLOps Engineer", "description": "Build and maintain ML infrastructure, CI/CD for ML, model monitoring, feature stores, and automated pipelines.", "skills": ["MLflow", "Docker/K8s", "CI/CD", "Monitoring", "Infrastructure as Code"] },
+    { "role": "Data Scientist", "description": "Analyze data, build predictive models, derive business insights, and communicate findings to stakeholders.", "skills": ["Python/R", "SQL", "Statistics", "ML", "Data Visualization", "Communication"] },
+    { "role": "Applied ML Scientist", "description": "Apply cutting-edge ML research to solve business problems, develop novel algorithms, and publish innovations.", "skills": ["Deep Learning", "Research Methods", "PyTorch", "Math/Stats", "Domain Expertise"] },
+    { "role": "NLP/Computer Vision Engineer", "description": "Specialize in building NLP or CV systems including LLMs, object detection, and multimodal models.", "skills": ["Transformers", "PyTorch/TF", "OpenCV", "HuggingFace", "RAG"] }
+  ],
+
+  "roadmap": [
+    "ML Foundations & Python Ecosystem",
+    "Regression: Prediction & Modeling",
+    "Classification: Categorization & Decision Making",
+    "Ensemble Methods & Advanced Models",
+    "Unsupervised Learning & Clustering",
+    "Feature Engineering & Selection",
+    "Neural Networks & Deep Learning Foundations",
+    "Model Evaluation, Validation & Tuning",
+    "MLOps: Production Machine Learning",
+    "Advanced ML & Research Topics"
+  ],
+
+  "related": ["artificial-intelligence", "deep-learning", "data-science", "python", "nlp", "computer-vision"]
+}
