@@ -13,6 +13,7 @@ import TechnologySubNav from './TechnologySubNav'
 const CONTENT_TYPES = ['overview', 'roadmap', 'books', 'interview-questions', 'cheatsheet', 'documentation', 'faq', 'projects', 'practice', 'certifications']
 
 function formatLabel(str) {
+  if (!str) return ''
   return str.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
 }
 
@@ -68,16 +69,21 @@ function RoadmapSection({ data, techName }) {
   const nodes = Array.isArray(data) ? data : []
   return (
     <div className="space-y-6">
-      {nodes.map((node, i) => (
+      {nodes.map((node, i) => {
+        const topics = Array.isArray(node.topics)
+          ? node.topics
+          : String(node.topics || node.label || '').split(/\s{2,}|\n/).filter(Boolean)
+        return (
         <motion.div key={i} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.05 }} className="card p-5">
           <h3 className="font-bold text-lg text-primary-600 dark:text-primary-400 mb-2">{node.label || `Stage ${i + 1}`}</h3>
           <div className="flex flex-wrap gap-2">
-            {(node.topics || node.label || '').split(/\s{2,}|\n/).filter(Boolean).map((topic, j) => (
-              <span key={j} className="px-3 py-1 text-sm bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full">{topic.trim()}</span>
+            {topics.map((topic, j) => (
+              <span key={j} className="px-3 py-1 text-sm bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full">{String(topic).trim()}</span>
             ))}
           </div>
         </motion.div>
-      ))}
+        )
+      })}
     </div>
   )
 }
@@ -238,8 +244,9 @@ function ContentCard({ title, subtitle }) {
 }
 
 export default function TechnologySubPage() {
-  const { category, slug, contentType } = useParams()
+  const { slug, contentType } = useParams()
   const location = useLocation()
+  const category = location.pathname.split('/').filter(Boolean)[0]
 
   const validContentType = CONTENT_TYPES.includes(contentType) ? contentType : 'overview'
 

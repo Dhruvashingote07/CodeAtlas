@@ -25,7 +25,7 @@ export function getSearchableContent() {
     difficulty: t.difficulty,
     tags: t.tags || [],
     topics: t.topics || [],
-    url: `/${t._path || 'languages'}/${t.id}`,
+    url: `/${t._path || 'languages'}/${t.id || ''}`,
     searchText: [
       t.name,
       t.description,
@@ -45,7 +45,7 @@ export function getSearchableContent() {
     author: b.author,
     difficulty: b.difficulty,
     tags: b.topics || [],
-    url: `/books#${encodeURIComponent(b.title)}`,
+    url: `/books#${encodeURIComponent(b.title || '')}`,
     searchText: [
       b.title,
       b.author,
@@ -63,7 +63,7 @@ export function getSearchableContent() {
     category: 'tools',
     description: t.description || 'Developer tool',
     tags: [],
-    url: t.url || `/tools#${t.name?.toLowerCase().replace(/\s+/g, '-')}`,
+    url: t.url || (t.name ? `/tools#${t.name.toLowerCase().replace(/\s+/g, '-')}` : ''),
     searchText: [t.name, t.description].filter(Boolean).join(' ').toLowerCase(),
   }))
 
