@@ -46,20 +46,30 @@ npm run lint     # Run ESLint
 ## Data Architecture
 
 ```
-src/data/
-├── languages.js           # 11 programming languages
-├── webDevelopment.js      # 12 web technologies (FE + BE)
-├── databases.js           # 8 database technologies
-├── aiML.js                # 10 AI/ML frameworks
-├── dataScience.js         # 8 data science tools
-├── devops.js              # 10 DevOps tools
-├── cybersecurity.js       # 7 cybersecurity tools
-├── mobileDevelopment.js   # 6 mobile technologies
-├── iot.js                 # 7 IoT technologies
-├── books.js               # 9 curated book categories + auto-generated collections
-├── catalog.js             # Central re-export hub combining all data
-└── generated/
-    └── content.json       # Auto-generated aggregate (via scripts/generate-content.mjs)
+src/
+├── config/
+│   └── constants.js       # Design tokens, navigation, footer links, site metadata
+├── context/
+│   └── SearchContext.jsx  # React context for global search state management
+├── data/
+│   ├── languages.js           # 11 programming languages
+│   ├── webDevelopment.js      # 12 web technologies (FE + BE)
+│   ├── databases.js           # 8 database technologies
+│   ├── aiML.js                # 10 AI/ML frameworks
+│   ├── dataScience.js         # 8 data science tools
+│   ├── devops.js              # 10 DevOps tools
+│   ├── cybersecurity.js       # 7 cybersecurity tools
+│   ├── mobileDevelopment.js   # 6 mobile technologies
+│   ├── iot.js                 # 7 IoT technologies
+│   ├── books.js               # 9 curated book categories + auto-generated collections
+│   ├── catalog.js             # Central re-export hub combining all data
+│   └── generated/
+│       └── content.json       # Auto-generated aggregate content (see scripts/)
+└── pages/
+    └── SearchPage.jsx     # Full-text search results page with URL query sync
+
+scripts/
+└── generate-content.mjs   # Data pipeline: enriches source data → validates → writes content.json
 ```
 
 ## Phase 3 — Content & Search Layer (May 2026)
@@ -85,8 +95,8 @@ src/content/
 ### Global Search — Fuse.js Integration
 - `src/hooks/useSearch.js` — Singleton Fuse.js instance with 200ms debounce, category filtering, and ranked results
 - Searches across `name`, `description`, `tags`, `topics`, `author`, `searchText` with weighted scoring
-- `src/pages/SearchPage.jsx` — Instant search with type filters (all/technology/book/tool), URL query sync, animated results grid
-- Indexed items: 79 technologies + all books + all tools in a single unified index
+- `src/context/SearchContext.jsx` — React context providing `search()`, `clearSearch()`, `query`, `results`, and `isSearching` state across components
+- `src/pages/SearchPage.jsx` — Indexed items: 79 technologies + all books + all tools in a single unified index; instant search with type filters (all/technology/book/tool), URL query sync, animated results grid
 
 ### Analytics
 - `src/components/Analytics.jsx` — Google Analytics 4 + Microsoft Clarity integration
