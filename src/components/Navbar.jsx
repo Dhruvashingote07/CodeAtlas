@@ -3,6 +3,14 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useTheme } from '../context/ThemeContext'
 import { motion, AnimatePresence } from 'framer-motion'
 
+function ExternalLinkIcon() {
+  return (
+    <svg className="w-3.5 h-3.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+    </svg>
+  )
+}
+
 const primaryNavItems = [
   { name: 'Web', path: '/web-development' },
   { name: 'Databases', path: '/databases' },
@@ -17,6 +25,7 @@ const primaryNavItems = [
   { name: 'Interview Prep', path: '/interview-prep' },
   { name: 'Roadmaps', path: '/roadmaps' },
   { name: 'Tools', path: '/tools' },
+  { name: 'Roadmap.sh', external: true, path: 'https://roadmap.sh' },
 ]
 
 const languageResources = [
@@ -194,16 +203,30 @@ export default function Navbar() {
                 onScroll={checkScroll}
                 className="flex items-center gap-1 scrollbar-horizontal"
               >
-              {primaryNavItems.map((item) => (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  onClick={closeMenus}
-                  className="px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors shrink-0"
-                >
-                  {item.name}
-                </Link>
-              ))}
+              {primaryNavItems.map((item) =>
+                item.external ? (
+                  <a
+                    key={item.path}
+                    href={item.path}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={closeMenus}
+                    className="px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors inline-flex items-center gap-1 shrink-0"
+                  >
+                    {item.name}
+                    <ExternalLinkIcon />
+                  </a>
+                ) : (
+                  <Link
+                    key={item.path}
+                    to={item.path}
+                    onClick={closeMenus}
+                    className="px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors shrink-0"
+                  >
+                    {item.name}
+                  </Link>
+                )
+              )}
               </div>
               {canScrollRight && (
                 <button
@@ -289,16 +312,30 @@ export default function Navbar() {
               <div className="px-3 pt-4 pb-1 text-xs font-semibold uppercase tracking-[0.2em] text-gray-500 dark:text-gray-400">
                 Explore
               </div>
-              {primaryNavItems.map((item) => (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  onClick={() => { setIsOpen(false); closeMenus(); }}
-                  className="block px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"
-                >
-                  {item.name}
-                </Link>
-              ))}
+              {primaryNavItems.map((item) =>
+                item.external ? (
+                  <a
+                    key={item.path}
+                    href={item.path}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => { setIsOpen(false); closeMenus(); }}
+                    className="block px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 inline-flex items-center gap-1"
+                  >
+                    <span className="mr-2">{item.name}</span>
+                    <ExternalLinkIcon />
+                  </a>
+                ) : (
+                  <Link
+                    key={item.path}
+                    to={item.path}
+                    onClick={() => { setIsOpen(false); closeMenus(); }}
+                    className="block px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"
+                  >
+                    {item.name}
+                  </Link>
+                )
+              )}
             </div>
           </motion.div>
         )}
