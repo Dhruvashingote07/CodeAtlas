@@ -59,7 +59,10 @@ export default function Footer() {
             </div>
           ))}
         </div>
-        <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800">
+        <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800 space-y-3">
+          <p className="text-xs text-gray-400 dark:text-gray-500 text-center">
+            FAQ Sections &mdash; 42+ technologies with 8+ FAQ entries each, SEO-optimized with FAQPage schema
+          </p>
           <p className="text-sm text-gray-500 dark:text-gray-500 text-center">
             &copy; {new Date().getFullYear()} CodeAtlas. All rights reserved.
           </p>
